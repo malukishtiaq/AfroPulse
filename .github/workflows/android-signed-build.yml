@@ -63,9 +63,9 @@ jobs:
         
     - name: Build Signed Release APK
       env:
-        KEYSTORE_PASSWORD: ${{ secrets.KEYSTORE_PASSWORD || 'Starion@55' }}
-        KEY_ALIAS: ${{ secrets.KEY_ALIAS || 'afropulse' }}
-        KEY_PASSWORD: ${{ secrets.KEY_PASSWORD || 'Starion@55' }}
+        KEYSTORE_PASSWORD: ${{ secrets.KEYSTORE_PASSWORD || 'aaaaaaaa' }}
+        KEY_ALIAS: ${{ secrets.KEY_ALIAS || 'AfroPulse' }}
+        KEY_PASSWORD: ${{ secrets.KEY_PASSWORD || 'aaaaaaaa' }}
       run: |
         dotnet build PlayTube.csproj \
           -c Release \
@@ -78,9 +78,9 @@ jobs:
 
     - name: Build Signed AAB (Android App Bundle)
       env:
-        KEYSTORE_PASSWORD: ${{ secrets.KEYSTORE_PASSWORD || 'Starion@55' }}
-        KEY_ALIAS: ${{ secrets.KEY_ALIAS || 'afropulse' }}
-        KEY_PASSWORD: ${{ secrets.KEY_PASSWORD || 'Starion@55' }}
+        KEYSTORE_PASSWORD: ${{ secrets.KEYSTORE_PASSWORD || 'aaaaaaaa' }}
+        KEY_ALIAS: ${{ secrets.KEY_ALIAS || 'AfroPulse' }}
+        KEY_PASSWORD: ${{ secrets.KEY_PASSWORD || 'aaaaaaaa' }}
       run: |
         dotnet build PlayTube.csproj \
           -c Release \
