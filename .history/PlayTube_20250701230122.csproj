@@ -461,16 +461,16 @@
 			<HintPath>API\CircleButton.dll</HintPath>
 		</Reference>
 		<Reference Include="InAppBilling">
-		  <HintPath>API\InAppBilling.dll</HintPath>
+		  <HintPath>..\API\InAppBilling.dll</HintPath>
 		</Reference>
 		<Reference Include="IyziPay">
-			<HintPath>API\IyziPay.dll</HintPath>
+			<HintPath>..\API\IyziPay.dll</HintPath>
 		</Reference>
 		<Reference Include="PlayTubeClient">
-		  <HintPath>API\PlayTubeClient.dll</HintPath>
+		  <HintPath>..\API\PlayTubeClient.dll</HintPath>
 		</Reference>
 		<Reference Include="SecurionPay">
-			<HintPath>API\SecurionPay.dll</HintPath>
+			<HintPath>..\API\SecurionPay.dll</HintPath>
 		</Reference>
 	</ItemGroup>
 </Project>

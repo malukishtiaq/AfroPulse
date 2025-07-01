@@ -1,0 +1,134 @@
+name: Android Signed Build
+
+on:
+  push:
+    tags:
+      - 'v*'
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: '8.0.x'
+
+    - name: Setup Java JDK
+      uses: actions/setup-java@v4
+      with:
+        java-version: '17'
+        distribution: 'microsoft'
+
+    - name: Install Android SDK
+      uses: android-actions/setup-android@v3
+      with:
+        accept-android-sdk-licenses: true
+        log-accepted-android-sdk-licenses: true
+        packages: "platform-tools build-tools;34.0.0 platforms;android-34 ndk;26.1.10909125"
+
+    - name: Install Android workload
+      run: |
+        echo "=== Installing Android workload ==="
+        dotnet workload install android --include-previews
+        echo "=== Verifying installation ==="
+        dotnet workload list | grep -i android || echo "Android workload not found"
+        
+    - name: Verify environment
+      run: |
+        echo "=== .NET SDK Version ==="
+        dotnet --version
+        echo "=== Installed Workloads ==="
+        dotnet workload list
+        echo "=== Available SDKs ==="
+        dotnet --list-sdks
+        echo "=== Available Runtimes ==="
+        dotnet --list-runtimes
+        echo "=== Android SDK Location ==="
+        echo "ANDROID_HOME: $ANDROID_HOME"
+        echo "ANDROID_SDK_ROOT: $ANDROID_SDK_ROOT"
+
+    - name: Restore NuGet packages
+      run: dotnet restore PlayTube.csproj
+
+    - name: Setup keystore for signing
+      run: |
+        echo "Using existing keystore from repository"
+        ls -la KeyApk/
+        
+    - name: Build Signed Release APK
+      env:
+        KEYSTORE_PASSWORD: ${{ secrets.KEYSTORE_PASSWORD || 'aaaaaaaa' }}
+        KEY_ALIAS: ${{ secrets.KEY_ALIAS || 'AfroPulse' }}
+        KEY_PASSWORD: ${{ secrets.KEY_PASSWORD || 'aaaaaaaa' }}
+      run: |
+        dotnet build PlayTube.csproj \
+          -c Release \
+          -p:AndroidBuildApplicationPackage=true \
+          -p:AndroidKeyStore=true \
+          -p:AndroidSigningKeyStore=KeyApk/AfroPulse.keystore \
+          -p:AndroidSigningStorePass="${KEYSTORE_PASSWORD}" \
+          -p:AndroidSigningKeyAlias="${KEY_ALIAS}" \
+          -p:AndroidSigningKeyPass="${KEY_PASSWORD}"
+
+    - name: Build Signed AAB (Android App Bundle)
+      env:
+        KEYSTORE_PASSWORD: ${{ secrets.KEYSTORE_PASSWORD || 'aaaaaaaa' }}
+        KEY_ALIAS: ${{ secrets.KEY_ALIAS || 'AfroPulse' }}
+        KEY_PASSWORD: ${{ secrets.KEY_PASSWORD || 'aaaaaaaa' }}
+      run: |
+        dotnet build PlayTube.csproj \
+          -c Release \
+          -p:AndroidBuildApplicationPackage=true \
+          -p:AndroidPackageFormat=aab \
+          -p:AndroidKeyStore=true \
+          -p:AndroidSigningKeyStore=KeyApk/AfroPulse.keystore \
+          -p:AndroidSigningStorePass="${KEYSTORE_PASSWORD}" \
+          -p:AndroidSigningKeyAlias="${KEY_ALIAS}" \
+          -p:AndroidSigningKeyPass="${KEY_PASSWORD}"
+
+    - name: List generated files
+      run: |
+        echo "=== Generated Files ==="
+        find . -name "*.apk" -type f
+        find . -name "*.aab" -type f
+        echo "=== Release Directory ==="
+        ls -la bin/Release/ || echo "Release directory not found"
+        echo "=== Net8.0-android Directory ==="
+        find . -name "net8.0-android" -type d
+        find . -name "net8.0-android" -type d -exec ls -la {} \; 2>/dev/null || echo "net8.0-android directory not found"
+
+    - name: Upload Signed APK
+      uses: actions/upload-artifact@v4
+      with:
+        name: AfroPulse-signed-release-apk
+        path: |
+          bin/Release/**/*.apk
+          bin/Release/**/*-Signed.apk
+          bin/Release/net8.0-android/**/*.apk
+          bin/Release/net8.0-android/**/*-Signed.apk
+
+    - name: Upload Signed AAB
+      uses: actions/upload-artifact@v4
+      with:
+        name: AfroPulse-signed-app-bundle
+        path: |
+          bin/Release/**/*.aab
+          bin/Release/net8.0-android/**/*.aab
+
+    - name: Build Summary
+      run: |
+        echo "🎉 Signed build completed successfully!"
+        echo "📱 Signed APK files are available in the artifacts section"
+        echo "📦 Signed AAB files are available in the artifacts section"
+        echo ""
+        echo "To create a release manually:"
+        echo "1. Go to the Actions tab"
+        echo "2. Download the signed artifacts"
+        echo "3. Go to Releases and create a new release"
+        echo "4. Upload the signed APK/AAB files" 

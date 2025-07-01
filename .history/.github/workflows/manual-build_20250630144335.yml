@@ -1,0 +1,99 @@
+name: Manual Build
+
+on:
+  workflow_dispatch:
+    inputs:
+      build_type:
+        description: 'Build Type'
+        required: true
+        default: 'apk'
+        type: choice
+        options:
+        - apk
+        - aab
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: '8.0.x'
+        
+    - name: Setup Java
+      uses: actions/setup-java@v4
+      with:
+        distribution: 'temurin'
+        java-version: '17'
+        
+    - name: Setup Android SDK
+      uses: android-actions/setup-android@v3
+      with:
+        packages: "platform-tools platforms;android-34 build-tools;34.0.0"
+        
+    - name: Install Android workload
+      run: |
+        echo "=== Installing Android workload ==="
+        dotnet workload install android --include-previews
+        echo "=== Verifying installation ==="
+        dotnet workload list | grep -i android || echo "Android workload not found"
+        
+    - name: Verify environment
+      run: |
+        echo "=== .NET SDK Version ==="
+        dotnet --version
+        echo "=== Installed Workloads ==="
+        dotnet workload list
+        echo "=== Available SDKs ==="
+        dotnet --list-sdks
+        echo "=== Available Runtimes ==="
+        dotnet --list-runtimes
+        echo "=== Android SDK Location ==="
+        echo "ANDROID_HOME: $ANDROID_HOME"
+        echo "ANDROID_SDK_ROOT: $ANDROID_SDK_ROOT"
+        
+    - name: Build APK
+      if: github.event.inputs.build_type == 'apk'
+      run: |
+        dotnet build WoWonder.csproj -c Release -p:AndroidBuildApplicationPackage=true
+        
+    - name: Build AAB
+      if: github.event.inputs.build_type == 'aab'
+      run: |
+        dotnet build WoWonder.csproj -c Release -p:AndroidBuildApplicationPackage=true -p:AndroidPackageFormat=aab
+        
+    - name: List generated files
+      run: |
+        echo "=== Generated Files ==="
+        find . -name "*.apk" -type f
+        find . -name "*.aab" -type f
+        echo "=== Release Directory ==="
+        ls -la bin/Release/ || echo "Release directory not found"
+        echo "=== Net8.0-android Directory ==="
+        find . -name "net8.0-android" -type d
+        find . -name "net8.0-android" -type d -exec ls -la {} \; 2>/dev/null || echo "net8.0-android directory not found"
+        
+    - name: Upload APK
+      if: github.event.inputs.build_type == 'apk'
+      uses: actions/upload-artifact@v4
+      with:
+        name: WoWonder-APK
+        path: |
+          bin/Release/**/*.apk
+          bin/Release/**/*-Signed.apk
+          bin/Release/net8.0-android/**/*.apk
+          bin/Release/net8.0-android/**/*-Signed.apk
+        
+    - name: Upload AAB
+      if: github.event.inputs.build_type == 'aab'
+      uses: actions/upload-artifact@v4
+      with:
+        name: WoWonder-AAB
+        path: |
+          bin/Release/**/*.aab
+          bin/Release/net8.0-android/**/*.aab 

@@ -467,10 +467,10 @@
 			<HintPath>API\IyziPay.dll</HintPath>
 		</Reference>
 		<Reference Include="PlayTubeClient">
-		  <HintPath>API\PlayTubeClient.dll</HintPath>
+		  <HintPath>..\API\PlayTubeClient.dll</HintPath>
 		</Reference>
 		<Reference Include="SecurionPay">
-			<HintPath>API\SecurionPay.dll</HintPath>
+			<HintPath>..\API\SecurionPay.dll</HintPath>
 		</Reference>
 	</ItemGroup>
 </Project>

@@ -1,0 +1,74 @@
+name: Simple Android Build
+
+on:
+  workflow_dispatch:
+    inputs:
+      build_type:
+        description: 'Build type'
+        required: true
+        default: 'Release'
+        type: choice
+        options:
+        - Debug
+        - Release
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Setup MSBuild
+      uses: microsoft/setup-msbuild@v2
+
+    - name: Setup NuGet
+      uses: NuGet/setup-nuget@v2
+
+    - name: Setup Java JDK
+      uses: actions/setup-java@v4
+      with:
+        java-version: '17'
+        distribution: 'microsoft'
+
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: '8.0.x'
+
+    - name: Install Android workload
+      run: |
+        echo "=== Installing Android workload ==="
+        dotnet workload install android --include-previews
+        echo "=== Verifying installation ==="
+        dotnet workload list | findstr /i android || echo "Android workload not found"
+
+    - name: Verify environment
+      run: |
+        echo "=== .NET SDK Version ==="
+        dotnet --version
+        echo "=== Installed Workloads ==="
+        dotnet workload list
+        echo "=== Available SDKs ==="
+        dotnet --list-sdks
+        echo "=== Available Runtimes ==="
+        dotnet --list-runtimes
+
+    - name: Restore NuGet packages
+      run: dotnet restore WoWonder.csproj
+
+    - name: Build APK
+      run: |
+        dotnet build WoWonder.csproj -c ${{ github.event.inputs.build_type }} -p:AndroidBuildApplicationPackage=true
+
+    - name: Upload APK Artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: android-apk-${{ github.event.inputs.build_type }}
+        path: |
+          bin/${{ github.event.inputs.build_type }}/**/*.apk
+
+    - name: List generated files
+      run: |
+        Get-ChildItem -Recurse -Filter "*.apk" | ForEach-Object { Write-Host $_.FullName } 
