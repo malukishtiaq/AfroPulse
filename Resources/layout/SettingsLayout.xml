@@ -1,0 +1,1339 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:orientation="vertical"
+	android:background="?attr/colorFill"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	>
+
+	<androidx.appcompat.widget.Toolbar
+		android:id="@+id/toolbar"
+		android:layout_width="match_parent"
+		android:layout_height="48dp"
+		android:layout_marginTop="10dp"
+		app:theme="@style/ToolbarTheme"
+		android:layout_gravity="top"
+		app:layout_collapseMode="pin"
+		app:titleTextAppearance="@style/Toolbar.TitleText"
+		app:cardBackgroundColor="?attr/colorFill"
+		android:elevation="0dp">
+
+		<TextView
+            android:id="@+id/toolbar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textFontWeight="600"
+            android:textSize="18dp"
+            android:lineHeight="24dp"
+            android:text="@string/Lbl_Settings"
+            />
+
+	</androidx.appcompat.widget.Toolbar>
+
+	<View
+		android:layout_width="match_parent"
+		android:layout_height="1dp"
+		android:background="?attr/colorDivider"
+		/>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nested_scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        android:scrollingCache="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+			>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+				>
+
+                <FrameLayout
+                    android:id="@+id/layoutEditChannal"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:background="?attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+					>
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginStart="12dp"
+                        android:tint="?attr/colorReact"
+                        android:src="@drawable/pif_edit_my_channel"
+                        android:layout_gravity="start|center_vertical"
+                        android:gravity="center_vertical" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/Lbl_edit_MyChannal"
+                        android:layout_marginStart="48dp"
+                        android:textFontWeight="500"
+                        android:textSize="18dp"
+                        android:lineHeight="24dp"
+                        android:textStyle="normal"
+                        android:layout_gravity="start|center" />
+
+
+                    <FrameLayout
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="end|center"
+                        android:layout_marginEnd="12dp"
+						>
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/pif_video_player_menu_down"
+                            android:tint="#A1A6B2"
+                            android:rotation="270"
+                            android:layout_gravity="center"
+							/>
+                    </FrameLayout>
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/layoutWithdrawals"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:background="?attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+					>
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginStart="12dp"
+                        android:tint="?attr/colorReact"
+                        android:src="@drawable/pif_withdraw"
+                        android:layout_gravity="start|center_vertical"
+                        android:gravity="center_vertical" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/Lbl_Withdrawals"
+                        android:layout_marginStart="48dp"
+                        android:textFontWeight="500"
+                        android:textSize="18dp"
+                        android:lineHeight="24dp"
+                        android:textStyle="normal"
+                        android:layout_gravity="start|center" />
+
+
+                    <FrameLayout
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="end|center"
+                        android:layout_marginEnd="12dp"
+						>
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/pif_video_player_menu_down"
+                            android:tint="#A1A6B2"
+                            android:rotation="270"
+                            android:layout_gravity="center"
+							/>
+                    </FrameLayout>
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/layoutGoPro"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:background="?attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+					>
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginStart="12dp"
+                        android:src="@drawable/pif_go_pro"
+                        android:layout_gravity="start|center_vertical"
+                        android:gravity="center_vertical" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/Lbl_Go_Pro"
+                        android:layout_marginStart="48dp"
+                        android:textFontWeight="500"
+                        android:textSize="18dp"
+                        android:lineHeight="24dp"
+                        android:textStyle="normal"
+                        android:layout_gravity="start|center" />
+
+
+                    <FrameLayout
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="end|center"
+                        android:layout_marginEnd="12dp"
+						>
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/pif_video_player_menu_down"
+                            android:tint="#A1A6B2"
+                            android:rotation="270"
+                            android:layout_gravity="center"
+							/>
+                    </FrameLayout>
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/layoutVerification"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:background="?attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+					>
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginStart="12dp"
+                        android:tint="?attr/colorReact"
+                        android:src="@drawable/pif_verification"
+                        android:layout_gravity="start|center_vertical"
+                        android:gravity="center_vertical" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/Lbl_Verification"
+                        android:layout_marginStart="48dp"
+                        android:textFontWeight="500"
+                        android:textSize="18dp"
+                        android:lineHeight="24dp"
+                        android:textStyle="normal"
+                        android:layout_gravity="start|center" />
+
+
+                    <FrameLayout
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="end|center"
+                        android:layout_marginEnd="12dp"
+						>
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/pif_video_player_menu_down"
+                            android:tint="#A1A6B2"
+                            android:rotation="270"
+                            android:layout_gravity="center"
+							/>
+                    </FrameLayout>
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/layoutPoints"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:background="?attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+					>
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginStart="12dp"
+                        android:tint="?attr/colorReact"
+                        android:src="@drawable/pif_edit_my_channel"
+                        android:layout_gravity="start|center_vertical"
+                        android:gravity="center_vertical" />
+
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/Lbl_Points"
+                        android:layout_marginStart="48dp"
+                        android:textFontWeight="500"
+                        android:textSize="18dp"
+                        android:lineHeight="24dp"
+                        android:textStyle="normal"
+                        android:layout_gravity="start|center" />
+
+
+                    <FrameLayout
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="end|center"
+                        android:layout_marginEnd="12dp"
+						>
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/pif_video_player_menu_down"
+                            android:tint="#A1A6B2"
+                            android:rotation="270"
+                            android:layout_gravity="center"
+							/>
+                    </FrameLayout>
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/layoutBlockedUsers"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:background="?attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+					>
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginStart="12dp"
+                        android:tint="?attr/colorReact"
+                        android:src="@drawable/pif_block_user"
+                        android:layout_gravity="start|center_vertical"
+                        android:gravity="center_vertical" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/Lbl_BlockedUsers"
+                        android:layout_marginStart="48dp"
+                        android:textFontWeight="500"
+                        android:textSize="18dp"
+                        android:lineHeight="24dp"
+                        android:textStyle="normal"
+                        android:layout_gravity="start|center" />
+
+
+                    <FrameLayout
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="end|center"
+                        android:layout_marginEnd="12dp"
+						>
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/pif_video_player_menu_down"
+                            android:tint="#A1A6B2"
+                            android:rotation="270"
+                            android:layout_gravity="center"
+							/>
+                    </FrameLayout>
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/layoutWallet"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:background="?attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+					>
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginStart="12dp"
+                        android:tint="?attr/colorReact"
+                        android:src="@drawable/pif_wallet"
+                        android:layout_gravity="start|center_vertical"
+                        android:gravity="center_vertical" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/Lbl_Wallet"
+                        android:layout_marginStart="48dp"
+                        android:textFontWeight="500"
+                        android:textSize="18dp"
+                        android:lineHeight="24dp"
+                        android:textStyle="normal"
+                        android:layout_gravity="start|center" />
+
+
+                    <FrameLayout
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="end|center"
+                        android:layout_marginEnd="12dp"
+						>
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/pif_video_player_menu_down"
+                            android:tint="#A1A6B2"
+                            android:rotation="270"
+                            android:layout_gravity="center"
+							/>
+                    </FrameLayout>
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/layoutLinkWithTvCode"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:background="?attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+					>
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginStart="12dp"
+                        android:tint="?attr/colorReact"
+                        android:src="@drawable/pif_link_with_tv_code"
+                        android:layout_gravity="start|center_vertical"
+                        android:gravity="center_vertical" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/Lbl_LinkWithTvCode"
+                        android:layout_marginStart="48dp"
+                        android:textFontWeight="500"
+                        android:textSize="18dp"
+                        android:lineHeight="24dp"
+                        android:textStyle="normal"
+                        android:layout_gravity="start|center" />
+
+
+                    <FrameLayout
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="end|center"
+                        android:layout_marginEnd="12dp"
+						>
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/pif_video_player_menu_down"
+                            android:tint="#A1A6B2"
+                            android:rotation="270"
+                            android:layout_gravity="center"
+							/>
+                    </FrameLayout>
+                </FrameLayout>
+            </LinearLayout>
+
+            <View
+	            android:layout_width="match_parent"
+	            android:layout_height="16dp"
+	            />
+
+            <View
+	            android:layout_width="match_parent"
+	            android:layout_height="1dp"
+	            android:background="?attr/colorDivider"
+	            />
+            
+            <View
+	            android:layout_width="match_parent"
+	            android:layout_height="16dp"
+	            />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+
+                <FrameLayout
+                    android:id="@+id/layoutPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:background="?attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+					>
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginStart="12dp"
+                        android:tint="?attr/colorReact"
+                        android:src="@drawable/pif_password"
+                        android:layout_gravity="start|center_vertical"
+                        android:gravity="center_vertical" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/Lbl_Password"
+                        android:layout_marginStart="48dp"
+                        android:textFontWeight="500"
+                        android:textSize="18dp"
+                        android:lineHeight="24dp"
+                        android:textStyle="normal"
+                        android:layout_gravity="start|center" />
+
+
+                    <FrameLayout
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="end|center"
+                        android:layout_marginEnd="12dp"
+						>
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/pif_video_player_menu_down"
+                            android:tint="#A1A6B2"
+                            android:rotation="270"
+                            android:layout_gravity="center"
+							/>
+                    </FrameLayout>
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/layoutTwoFactor"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:background="?attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+					>
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginStart="12dp"
+                        android:tint="?attr/colorReact"
+                        android:src="@drawable/pif_two_factor_authentication"
+                        android:layout_gravity="start|center_vertical"
+                        android:gravity="center_vertical" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/Lbl_TwoFactor"
+                        android:layout_marginStart="48dp"
+                        android:textFontWeight="500"
+                        android:textSize="18dp"
+                        android:lineHeight="24dp"
+                        android:textStyle="normal"
+                        android:layout_gravity="start|center" />
+
+
+                    <FrameLayout
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="end|center"
+                        android:layout_marginEnd="12dp"
+						>
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/pif_video_player_menu_down"
+                            android:tint="#A1A6B2"
+                            android:rotation="270"
+                            android:layout_gravity="center"
+							/>
+                    </FrameLayout>
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/layoutManageSessions"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:background="?attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+					>
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginStart="12dp"
+                        android:tint="?attr/colorReact"
+                        android:src="@drawable/pif_manage_sessions"
+                        android:layout_gravity="start|center_vertical"
+                        android:gravity="center_vertical" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/Lbl_ManageSessions"
+                        android:layout_marginStart="48dp"
+                        android:textFontWeight="500"
+                        android:textSize="18dp"
+                        android:lineHeight="24dp"
+                        android:textStyle="normal"
+                        android:layout_gravity="start|center" />
+
+                    <FrameLayout
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="end|center"
+                        android:layout_marginEnd="12dp"
+						>
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/pif_video_player_menu_down"
+                            android:tint="#A1A6B2"
+                            android:rotation="270"
+                            android:layout_gravity="center"
+							/>
+                    </FrameLayout>
+                </FrameLayout>
+            </LinearLayout>
+
+            <View
+	            android:layout_width="match_parent"
+	            android:layout_height="16dp"
+	            />
+
+            <View
+	            android:layout_width="match_parent"
+	            android:layout_height="1dp"
+	            android:background="?attr/colorDivider"
+	            />
+            
+            <View
+	            android:layout_width="match_parent"
+	            android:layout_height="16dp"
+	            />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+
+                <FrameLayout
+                    android:id="@+id/layoutTheme"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:background="?attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+					>
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginStart="12dp"
+                        android:tint="?attr/colorReact"
+                        android:src="@drawable/pif_theme"
+                        android:layout_gravity="start|center_vertical"
+                        android:gravity="center_vertical" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/Lbl_Theme"
+                        android:layout_marginStart="48dp"
+                        android:textFontWeight="500"
+                        android:textSize="18dp"
+                        android:lineHeight="24dp"
+                        android:textStyle="normal"
+                        android:layout_gravity="start|center" />
+
+
+                    <FrameLayout
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="end|center"
+                        android:layout_marginEnd="12dp"
+						>
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/pif_video_player_menu_down"
+                            android:tint="#A1A6B2"
+                            android:rotation="270"
+                            android:layout_gravity="center"
+							/>
+                    </FrameLayout>
+                </FrameLayout>
+                    
+                <FrameLayout
+                    android:id="@+id/layoutLanguage"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:background="?attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+					>
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginStart="12dp"
+                        android:tint="?attr/colorReact"
+                        android:src="@drawable/pif_Language"
+                        android:layout_gravity="start|center_vertical"
+                        android:gravity="center_vertical" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/Lbl_Language"
+                        android:layout_marginStart="48dp"
+                        android:textFontWeight="500"
+                        android:textSize="18dp"
+                        android:lineHeight="24dp"
+                        android:textStyle="normal"
+                        android:layout_gravity="start|center" />
+
+
+                    <FrameLayout
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="end|center"
+                        android:layout_marginEnd="12dp"
+						>
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/pif_video_player_menu_down"
+                            android:tint="#A1A6B2"
+                            android:rotation="270"
+                            android:layout_gravity="center"
+							/>
+                    </FrameLayout>
+                </FrameLayout>
+                    
+                <FrameLayout
+                    android:id="@+id/layoutPictureInPicture"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:background="?attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+					>
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginStart="12dp"
+                        android:tint="?attr/colorReact"
+                        android:src="@drawable/pif_pitcure_in_picture"
+                        android:layout_gravity="start|center_vertical"
+                        android:gravity="center_vertical" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/Lbl_PictureInPicture"
+                        android:layout_marginStart="48dp"
+                        android:textFontWeight="500"
+                        android:textSize="18dp"
+                        android:lineHeight="24dp"
+                        android:textStyle="normal"
+                        android:layout_gravity="start|center" />
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end|center"
+                        android:layout_marginEnd="12dp"
+						>
+
+                        <Switch
+                            android:id="@+id/SwitchPIP"
+                            android:textFontWeight="500"
+							android:textSize="14dp"
+							android:lineHeight="20dp"
+							android:translationY="0dp"
+							android:layout_centerVertical="true"
+							
+							android:layout_alignParentEnd="true"
+							android:layout_marginTop="0dp"
+							android:layout_marginEnd="10dp"
+							android:layout_marginBottom="0dp"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content" 
+							android:track="@drawable/pif_toggle_track"
+							android:thumb="@drawable/pif_toggle_thumb"
+                            android:layout_gravity="end|center"
+                            android:checked="false"
+                            />
+                    </FrameLayout>
+                    
+                </FrameLayout>
+
+            </LinearLayout>
+
+            <View
+	            android:layout_width="match_parent"
+	            android:layout_height="16dp"
+	            />
+
+            <View
+	            android:layout_width="match_parent"
+	            android:layout_height="1dp"
+	            android:background="?attr/colorDivider"
+	            />
+            
+            <View
+	            android:layout_width="match_parent"
+	            android:layout_height="16dp"
+	            />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+
+                <FrameLayout
+                    android:id="@+id/layoutClearHistory"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:background="?attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+					>
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginStart="12dp"
+                        android:tint="?attr/colorReact"
+                        android:src="@drawable/pif_history_delete"
+                        android:layout_gravity="start|center_vertical"
+                        android:gravity="center_vertical" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/Lbl_ClearHistory"
+                        android:layout_marginStart="48dp"
+                        android:textFontWeight="500"
+                        android:textSize="18dp"
+                        android:lineHeight="24dp"
+                        android:textStyle="normal"
+                        android:layout_gravity="start|center" />
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/layoutPauseWatchHistory"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:background="?attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+					>
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginStart="12dp"
+                        android:tint="?attr/colorReact"
+                        android:src="@drawable/pif_history_pause"
+                        android:layout_gravity="start|center_vertical"
+                        android:gravity="center_vertical" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/Lbl_PauseWatchHistory"
+                        android:layout_marginStart="48dp"
+                        android:textFontWeight="500"
+                        android:textSize="18dp"
+                        android:lineHeight="24dp"
+                        android:textStyle="normal"
+                        android:layout_gravity="start|center" />
+
+                    <Switch
+                        android:id="@+id/SwitchPauseWatchHistory"
+                        android:textFontWeight="500"
+						android:textSize="14dp"
+						android:lineHeight="20dp"
+						android:translationY="0dp"
+						android:layout_centerVertical="true"
+						
+						android:layout_alignParentEnd="true"
+						android:layout_marginTop="0dp"
+						android:layout_marginEnd="10dp"
+						android:layout_marginBottom="0dp"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content" 
+						android:track="@drawable/pif_toggle_track"
+						android:thumb="@drawable/pif_toggle_thumb"
+                        android:layout_gravity="end|center"
+                        android:checked="false"/>
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/layoutClearCache"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:background="?attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+					>
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginStart="12dp"
+                        android:tint="?attr/colorReact"
+                        android:src="@drawable/pif_clear_cache"
+                        android:layout_gravity="start|center_vertical"
+                        android:gravity="center_vertical" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/Lbl_Clear_Cache"
+                        android:layout_marginStart="48dp"
+                        android:textFontWeight="500"
+                        android:textSize="18dp"
+                        android:lineHeight="24dp"
+                        android:textStyle="normal"
+                        android:layout_gravity="start|center" />
+                </FrameLayout>
+
+            </LinearLayout>
+
+            <View
+	            android:layout_width="match_parent"
+	            android:layout_height="16dp"
+	            />
+
+            <View
+	            android:layout_width="match_parent"
+	            android:layout_height="1dp"
+	            android:background="?attr/colorDivider"
+	            />
+            
+            <View
+	            android:layout_width="match_parent"
+	            android:layout_height="16dp"
+	            />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+
+                <FrameLayout
+                    android:id="@+id/layoutRateOurApp"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:background="?attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+					>
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginStart="12dp"
+                        android:tint="?attr/colorReact"
+                        android:src="@drawable/pif_rate_up_app"
+                        android:layout_gravity="start|center_vertical"
+                        android:gravity="center_vertical" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/Lbl_RateOurApp"
+                        android:layout_marginStart="48dp"
+                        android:textFontWeight="500"
+                        android:textSize="18dp"
+                        android:lineHeight="24dp"
+                        android:textStyle="normal"
+                        android:layout_gravity="start|center" />
+
+
+                    <FrameLayout
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="end|center"
+                        android:layout_marginEnd="12dp"
+						>
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/pif_video_player_menu_down"
+                            android:tint="#A1A6B2"
+                            android:rotation="270"
+                            android:layout_gravity="center"
+							/>
+                    </FrameLayout>
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/layoutInviteFriends"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:background="?attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+					>
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginStart="12dp"
+                        android:tint="?attr/colorReact"
+                        android:src="@drawable/pif_add_user"
+                        android:layout_gravity="start|center_vertical"
+                        android:gravity="center_vertical" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/Lbl_InviteFriends"
+                        android:layout_marginStart="48dp"
+                        android:textFontWeight="500"
+                        android:textSize="18dp"
+                        android:lineHeight="24dp"
+                        android:textStyle="normal"
+                        android:layout_gravity="start|center" />
+
+
+                    <FrameLayout
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="end|center"
+                        android:layout_marginEnd="12dp"
+						>
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/pif_video_player_menu_down"
+                            android:tint="#A1A6B2"
+                            android:rotation="270"
+                            android:layout_gravity="center"
+							/>
+                    </FrameLayout>
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/layoutAboutApp"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:background="?attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+					>
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginStart="12dp"
+                        android:tint="?attr/colorReact"
+                        android:src="@drawable/pif_about_us"
+                        android:layout_gravity="start|center_vertical"
+                        android:gravity="center_vertical" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/Lbl_About_App"
+                        android:layout_marginStart="48dp"
+                        android:textFontWeight="500"
+                        android:textSize="18dp"
+                        android:lineHeight="24dp"
+                        android:textStyle="normal"
+                        android:layout_gravity="start|center" />
+
+
+                    <FrameLayout
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="end|center"
+                        android:layout_marginEnd="12dp"
+						>
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/pif_video_player_menu_down"
+                            android:tint="#A1A6B2"
+                            android:rotation="270"
+                            android:layout_gravity="center"
+							/>
+                    </FrameLayout>
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/layoutTermsOfUse"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:background="?attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+					>
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginStart="12dp"
+                        android:tint="?attr/colorReact"
+                        android:src="@drawable/pif_term_of_us"
+                        android:layout_gravity="start|center_vertical"
+                        android:gravity="center_vertical" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/Lbl_Termsofuse"
+                        android:layout_marginStart="48dp"
+                        android:textFontWeight="500"
+                        android:textSize="18dp"
+                        android:lineHeight="24dp"
+                        android:textStyle="normal"
+                        android:layout_gravity="start|center" />
+
+
+                    <FrameLayout
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="end|center"
+                        android:layout_marginEnd="12dp"
+						>
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/pif_video_player_menu_down"
+                            android:tint="#A1A6B2"
+                            android:rotation="270"
+                            android:layout_gravity="center"
+							/>
+                    </FrameLayout>
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/layoutPrivacyPolicy"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:background="?attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+					>
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginStart="12dp"
+                        android:tint="?attr/colorReact"
+                        android:src="@drawable/pif_privacy_policy"
+                        android:layout_gravity="start|center_vertical"
+                        android:gravity="center_vertical" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/Privacy_Policy"
+                        android:layout_marginStart="48dp"
+                        android:textFontWeight="500"
+                        android:textSize="18dp"
+                        android:lineHeight="24dp"
+                        android:textStyle="normal"
+                        android:layout_gravity="start|center" />
+
+
+                    <FrameLayout
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="end|center"
+                        android:layout_marginEnd="12dp"
+						>
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/pif_video_player_menu_down"
+                            android:tint="#A1A6B2"
+                            android:rotation="270"
+                            android:layout_gravity="center"
+							/>
+                    </FrameLayout>
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/layoutHelp"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:background="?attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+					>
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginStart="12dp"
+                        android:tint="?attr/colorReact"
+                        android:src="@drawable/pif_help"
+                        android:layout_gravity="start|center_vertical"
+                        android:gravity="center_vertical" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/Lbl_Help"
+                        android:layout_marginStart="48dp"
+                        android:textFontWeight="500"
+                        android:textSize="18dp"
+                        android:lineHeight="24dp"
+                        android:textStyle="normal"
+                        android:layout_gravity="start|center" />
+
+
+                    <FrameLayout
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="end|center"
+                        android:layout_marginEnd="12dp"
+						>
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/pif_video_player_menu_down"
+                            android:tint="#A1A6B2"
+                            android:rotation="270"
+                            android:layout_gravity="center"
+							/>
+                    </FrameLayout>
+
+                </FrameLayout>
+
+            </LinearLayout>
+
+            <View
+	            android:layout_width="match_parent"
+	            android:layout_height="16dp"
+	            />
+
+            <View
+	            android:layout_width="match_parent"
+	            android:layout_height="1dp"
+	            android:background="?attr/colorDivider"
+	            />
+            
+            <View
+	            android:layout_width="match_parent"
+	            android:layout_height="16dp"
+	            />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+
+                <FrameLayout
+                    android:id="@+id/layoutDeleteAccount"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:background="?attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+					>
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginStart="12dp"
+                        android:tint="?attr/colorReact"
+                        android:src="@drawable/pif_delete"
+                        android:layout_gravity="start|center_vertical"
+                        android:gravity="center_vertical" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/Lbl_DeleteAccount"
+                        android:layout_marginStart="48dp"
+                        android:textFontWeight="500"
+                        android:textSize="18dp"
+                        android:lineHeight="24dp"
+                        android:textStyle="normal"
+                        android:layout_gravity="start|center" />
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/layoutLogout"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:background="?attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+					>
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginStart="12dp"
+                        android:tint="?attr/colorReact"
+                        android:src="@drawable/pif_logout"
+                        android:layout_gravity="start|center_vertical"
+                        android:gravity="center_vertical" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/Lbl_Logout"
+                        android:layout_marginStart="48dp"
+                        android:textFontWeight="500"
+                        android:textSize="18dp"
+                        android:lineHeight="24dp"
+                        android:textStyle="normal"
+                        android:layout_gravity="start|center" />
+                    
+                </FrameLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

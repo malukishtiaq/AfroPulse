@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/parent"
+    android:background="?attr/colorFill"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+	  
+	<androidx.appcompat.widget.Toolbar
+		android:id="@+id/toolbar"
+		android:layout_width="match_parent"
+		android:layout_height="50dp"
+		android:layout_gravity="top"
+		android:layout_alignParentTop="true"
+		android:elevation="0dp"
+		app:theme="@style/ToolbarTheme"
+		app:titleTextAppearance="@style/Toolbar.TitleText"
+		android:background="?attr/colorFill">
+
+		<RelativeLayout
+			android:layout_width="match_parent"
+			android:layout_height="match_parent">
+
+			<LinearLayout
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:orientation="horizontal"
+				android:layout_centerVertical="true"
+					>
+
+				<ImageView
+					android:id="@+id/app_logo"
+					android:layout_width="120dp"
+					android:layout_height="45dp"
+					android:layout_gravity="start"
+					android:gravity="start"
+					android:src="@drawable/logo" />
+				 
+			</LinearLayout>
+
+			<LinearLayout
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_alignParentEnd="true"
+				android:layout_centerVertical="true"
+				android:orientation="horizontal">
+				<ImageView
+					android:id="@+id/chatButton"
+					android:layout_width="28dp"
+					android:layout_height="28dp"
+					android:background="?attr/selectableItemBackgroundBorderless"
+					android:layout_marginEnd="10dp"
+					android:padding="3dp"
+					android:src="@drawable/pif_chat"
+					android:tint="?attr/colorIcon"
+					android:layout_gravity="end"
+					android:layout_alignParentEnd="true"
+					android:layout_centerVertical="true"  />
+				<ImageView
+					android:id="@+id/searchButton"
+					android:layout_width="28dp"
+					android:layout_height="28dp"
+					android:background="?attr/selectableItemBackgroundBorderless"
+					android:layout_marginEnd="10dp"
+					android:padding="3dp"
+					android:src="@drawable/pif_search"
+					android:tint="?attr/colorIcon"
+					android:layout_gravity="end"
+					android:layout_alignParentEnd="true"
+					android:layout_centerVertical="true"  />
+				<ImageView
+					android:id="@+id/notificationButton"
+					android:layout_width="28dp"
+					android:layout_height="28dp"
+					android:background="?attr/selectableItemBackgroundBorderless"
+					android:layout_marginEnd="10dp"
+					android:padding="3dp"
+					android:src="@drawable/pif_notification_icon"
+					android:tint="?attr/colorIcon"
+					android:layout_gravity="end"
+					android:layout_alignParentEnd="true"
+					android:layout_centerVertical="true"  />
+				<ImageView
+					android:id="@+id/profileButton"
+					android:layout_width="28dp"
+					android:layout_height="28dp"
+					android:background="?android:attr/selectableItemBackgroundBorderless"
+					android:layout_marginEnd="10dp"
+					android:padding="1dp"
+					android:src="@drawable/no_profile_image_circle"
+					android:layout_gravity="end"
+					android:layout_alignParentEnd="true"
+					android:layout_centerVertical="true"  />
+			</LinearLayout>
+		</RelativeLayout>
+	</androidx.appcompat.widget.Toolbar>
+
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefreshLayout"
+        android:layout_width="match_parent"
+        android:layout_alignParentTop="false"
+        android:layout_marginBottom="50dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:layout_height="wrap_content"
+		android:background="?attr/colorFill"
+        android:layout_centerVertical="true">
+
+
+	    <androidx.core.widget.NestedScrollView
+		    android:id="@+id/nested_scroll_view"
+		    android:layout_width="match_parent"
+		    android:layout_height="match_parent"
+		    android:scrollbars="none"
+		    android:scrollingCache="true">
+
+		    <LinearLayout
+			    android:layout_width="match_parent"
+			    android:layout_height="wrap_content"
+			    android:orientation="vertical">
+
+				<LinearLayout
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:orientation="vertical"
+					android:background="?attr/colorFill"
+					>
+
+					<include
+						android:id="@+id/HeaderTrendingLayout"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:layout_margin="15dp"  
+						layout="@layout/viewmodel_headertrending"
+					/>
+					 
+				</LinearLayout>
+
+				<View
+					android:layout_width="match_parent"
+					android:layout_height="1dp"
+					android:background="?attr/colorDivider"
+					/>
+
+				
+				<ViewStub
+					android:id="@+id/viewStubShimmer"
+					android:inflatedId="@+id/subViewShimmer"
+					android:layout="@layout/ShimmerLoadPageLayout"
+					android:layout_width="match_parent"
+					android:layout_height="match_parent" />
+
+
+				<LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="36dp"
+					android:gravity="center_vertical"
+					>
+
+					<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:textFontWeight="600"
+						android:textSize="20dp"
+						android:lineHeight="24dp"
+						android:textAllCaps="false"
+						android:text="@string/Lbl_Trendingvideos"
+						android:layout_gravity="start|center"
+						android:layout_marginStart="12dp"
+						android:layout_marginTop="8dp" />
+				</LinearLayout>
+                 
+			    <androidx.recyclerview.widget.RecyclerView
+				    android:id="@+id/recyler"
+				    android:clickable="true"
+				    android:focusable="false"
+					android:layout_marginTop="6dp"
+				    android:focusableInTouchMode="true"
+				    android:layout_width="match_parent"
+				    android:layout_height="match_parent"
+				    android:scrollbars="vertical" /> 
+		    </LinearLayout>
+	    </androidx.core.widget.NestedScrollView> 
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+	
+    <ViewStub
+        android:id="@+id/viewStub"
+        android:inflatedId="@+id/subView"
+        android:layout_marginTop="35dp"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout="@layout/EmptyStateLayout"
+        android:layout_width="match_parent"
+        android:layout_height="350dp" />
+</LinearLayout>

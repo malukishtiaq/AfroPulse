@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="?attr/colorFill"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:minHeight="300dp"
+    android:minWidth="500dp"
+    android:padding="10dp" >
+  <TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/title"
+    android:layout_marginEnd="6dp"
+    android:layout_marginStart="6dp" 
+    android:layout_marginTop="5dp"
+    android:text="@string/Lbl_TitleReportCopyRight"
+    android:textSize="14sp" /> 
+    <EditText
+        android:id="@+id/MessageEditText"
+        style="@style/EditTextNormalStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="80dp"
+        android:background="@drawable/EditTextStyleOne"
+        android:hint="@string/Lbl_Message"
+        android:textSize="15sp"
+        android:inputType="textImeMultiLine"
+        android:layout_marginTop="10dp"
+        android:gravity="start"
+        android:layout_alignParentEnd="true" />
+  <CheckBox
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:textSize="13sp"
+    android:layout_marginTop="10dp"
+    android:id="@+id/CheckBoxReportCopyRight1"
+    android:text="@string/Lbl_TextCheckBoxReportCopyRight_1"
+    android:textColor="?attr/colorReact"
+    android:buttonTint="@color/accent" />
+  <CheckBox
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:textSize="13sp"
+    android:layout_marginTop="10dp"
+    android:text="@string/Lbl_TextCheckBoxReportCopyRight_2"
+    android:id="@+id/CheckBoxReportCopyRight2"
+    android:textColor="?attr/colorReact"
+    android:buttonTint="@color/accent" />
+</LinearLayout>

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:layout_width="match_parent"
+	android:layout_height="72dp"
+	app:cardCornerRadius="0dp"
+	android:background="?android:attr/selectableItemBackground"
+	app:cardElevation="0dp">
+
+    <FrameLayout
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:orientation="horizontal"
+		android:gravity="center_vertical">
+
+		<RelativeLayout
+            android:id="@+id/mainliner_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="false"
+            android:orientation="horizontal"
+            android:focusable="false"
+            android:gravity="center_vertical"
+            android:layout_gravity="center_vertical"
+            >
+
+            <ImageView
+                android:id="@+id/Channel_Image"
+                android:scaleType="centerCrop"
+                android:layout_width="36dp" 
+                android:layout_height="36dp"
+                android:src="@drawable/no_profile_image_circle"
+                android:focusable="false"
+                android:clickable="false"
+                android:layout_marginStart="12dp"
+                />
+
+            <LinearLayout
+                android:id="@+id/info_container"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+			    android:orientation="vertical"
+			    android:layout_marginStart="60dp"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+
+                    <TextView
+                        android:id="@+id/ChannelName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="none"
+                        android:lines="1" 
+                        android:layout_marginTop="0dp"
+                        android:textFontWeight="500"
+				        android:textSize="18dp"
+				        android:lineHeight="20dp"
+                    />
+
+                    <TextView
+                        android:id="@+id/IconVerified" 
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/accent"
+                        android:textSize="12dp"
+                        android:layout_width="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="3dp" />
+
+                </LinearLayout>
+
+                <TextView
+				    android:id="@+id/subscribers"
+				    android:layout_width="wrap_content"
+				    android:layout_height="wrap_content"
+				    android:layout_below="@id/name"
+				    android:textColor="?attr/colorReact"
+				    android:lines="1"
+				    android:textFontWeight="400"
+				    android:textSize="14dp"
+				    android:lineHeight="20dp"
+				    />
+
+            </LinearLayout>
+
+		    <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="wrap_content"
+                android:layout_height="28dp"
+                android:id="@+id/SubChannelButton"
+                android:textFontWeight="500"
+				android:textSize="14dp"
+				android:lineHeight="20dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/round_button_pressed"
+                style="?android:attr/borderlessButtonStyle"
+                android:tag="false"
+                android:paddingTop="4dp"
+                android:paddingEnd="12dp"
+                android:paddingBottom="4dp"
+                android:paddingStart="12dp"
+                android:layout_marginEnd="12dp"
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:text="@string/Lbl_Subscribed"
+                android:textColor="?attr/colorReact" 
+                /> 
+
+        </RelativeLayout>
+
+        <View
+			android:layout_width="match_parent"
+			android:layout_height="1dp"
+			android:background="?attr/colorDivider"
+			android:layout_marginTop="70dp"
+			/>
+    </FrameLayout>
+
+</androidx.cardview.widget.CardView>

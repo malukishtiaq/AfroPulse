@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<paths xmlns:android="http://schemas.android.com/apk/res/android">
+	<external-path name="external" path="."/>
+	<files-path name="files" path="." />
+	<cache-path name="cache" path="." />
+	<external-files-path name="external_files" path="." />
+	<external-cache-path name="external_cache" path="." />
+	<external-media-path name="external_media" path="." />
+   
+	<files-path name="cropper" path="cropper-internal/"/>
+	<external-files-path name="my_images" path="/"/>
+	<cache-path name="cached_files" path="."/>
+	<files-path name="images" path="."/>
+
+</paths>

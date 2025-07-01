@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_gravity="top"
+    android:layout_margin="0dp"
+    android:fitsSystemWindows="true"
+    android:background="@drawable/rounded_dialog"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:gravity="center"
+            >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/pif_video_menu_top_bar"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="center_vertical"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Lbl_Theme"
+                android:textFontWeight="600"
+                android:textSize="22dp"
+                android:lineHeight="24dp"
+                android:layout_marginStart="12dp"
+                />
+
+        </LinearLayout>
+
+        <View
+		    android:layout_width="match_parent"
+		    android:layout_height="1dp"
+		    android:background="?attr/colorDivider"
+		    />
+
+        <LinearLayout
+            android:id="@+id/theme_light"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:weightSum="@dimen/two"
+            >
+
+            <LinearLayout
+                android:layout_width="@dimen/zero_dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                >
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginStart="12dp"
+                    android:src="@drawable/pif_sun"
+                    app:tint="?attr/colorReact" />
+            
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Lbl_Light"
+                    android:layout_marginStart="12dp"
+                    android:textFontWeight="500"
+                    android:textSize="16dp"
+                    android:lineHeight="22dp"
+                    
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="@dimen/zero_dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="end"
+                >
+                <ImageView
+                    android:id="@+id/theme_light_check"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginEnd="12dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/pif_checkmark"
+                    android:tint="@color/accent"
+                    />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/theme_moon_"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:weightSum="@dimen/two"
+            >
+
+            <LinearLayout
+                android:layout_width="@dimen/zero_dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                >
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginStart="12dp"
+                    android:src="@drawable/pif_moon"
+                    app:tint="?attr/colorReact" />
+            
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Lbl_Dark"
+                    android:layout_marginStart="12dp"
+                    android:textFontWeight="500"
+                    android:textSize="16dp"
+                    android:lineHeight="22dp"
+                    
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="@dimen/zero_dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="end"
+                >
+                <ImageView
+                    android:id="@+id/theme_moon_check"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginEnd="12dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/pif_checkmark"
+                    android:tint="@color/accent"
+                    />
+            </LinearLayout>
+
+        </LinearLayout>
+         
+	    <View
+		    android:layout_width="match_parent"
+		    android:layout_height="1dp"
+		    android:background="?attr/colorDivider"
+		    />
+
+  </LinearLayout>
+
+</RelativeLayout>

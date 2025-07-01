@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "404363570731",
+    "project_id": "playtube-a887f",
+    "storage_bucket": "playtube-a887f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:404363570731:android:4dddf198a053ea4e07046e",
+        "android_client_info": {
+          "package_name": "com.playtubevideo.apps"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "404363570731-nofikre60fui0ssih96644dllsotk66m.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.playtubevideo.apps",
+            "certificate_hash": "4d5e8324e0f1d3082ec558c8cc1b18eeb759d28e"
+          }
+        },
+        {
+          "client_id": "404363570731-cp589vh757t955ul9acc8jj08vqrq95i.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD7od5x0TX_msWvHaSFBGBoIeI2TbqpWOg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "404363570731-cp589vh757t955ul9acc8jj08vqrq95i.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      },
+      "admob_app_id": "ca-app-pub-5135691635931982~1514279535"
+    }
+  ],
+  "configuration_version": "1"
+}

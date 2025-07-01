@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:orientation="vertical"
+	android:background="?attr/colorFill"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent">
+	<com.google.android.material.appbar.AppBarLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:theme="@style/ThemeOverlay.MaterialComponents.Dark.ActionBar">
+		<androidx.appcompat.widget.Toolbar
+			android:id="@+id/toolbar"
+			android:layout_width="match_parent"
+			android:layout_height="50dp"
+			android:layout_gravity="top"
+			android:elevation="0dp"
+			app:theme="@style/ToolbarTheme"
+			app:titleTextAppearance="@style/Toolbar.TitleText"
+			android:background="?attr/colorFill">
+			<LinearLayout
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:gravity="end|center"
+				android:layout_gravity="end|center"
+				android:orientation="horizontal">
+				 
+				<androidx.appcompat.widget.AppCompatButton
+					android:layout_width="120dp"
+					android:layout_height="40dp"
+					android:id="@+id/create"
+					android:textSize="14sp"
+					android:layout_gravity="end|center"
+					android:layout_marginStart="11dp"
+					android:layout_marginEnd="10dp"
+					android:background="@drawable/round_button_pressed"
+					android:text="@string/Lbl_CreateArticle"
+					android:tag="false"
+					android:paddingTop="1dp"
+					android:paddingStart="17dp"
+					android:paddingEnd="17dp"
+					android:textAlignment="center"
+					android:textAllCaps="false"
+					android:forceDarkAllowed="false"
+					android:textColor="@color/gnt_white" />
+
+			</LinearLayout> 
+		</androidx.appcompat.widget.Toolbar>
+	</com.google.android.material.appbar.AppBarLayout> 
+	<androidx.core.widget.NestedScrollView
+		android:id="@+id/nested_scroll_view"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:scrollbars="none"
+		android:scrollingCache="true">
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="vertical">
+
+			<View
+				android:layout_width="match_parent"
+				android:layout_height="20dp" />
+			  
+			<AutoCompleteTextView
+				android:id="@+id/searchBox"
+				android:layout_width="match_parent"
+				android:layout_height="40dp"
+				android:hint="@string/Lbl_Search"
+				android:textSize="14sp"
+				android:layout_marginStart="10dp"
+				android:layout_marginEnd="10dp"
+				android:gravity="start|center"
+				android:layout_gravity="start|center"
+				android:background="@drawable/EditTextStyleOne"
+				android:drawableStart="@drawable/icon_search_vector"
+				android:drawablePadding="10dp"
+				android:drawableTint="#7C858E"
+				android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"
+				android:singleLine="true"
+				android:imeOptions="actionSearch" />
+			
+			<View
+				android:layout_width="match_parent"
+				android:layout_height="20dp" />
+
+			<com.google.android.material.tabs.TabLayout
+				android:id="@+id/tab_blog"
+				android:layout_width="match_parent"
+				android:layout_height="40dp"
+				android:background="?attr/colorFill"
+				android:layout_gravity="start"
+				android:gravity="start" 
+				android:paddingStart="10dp"
+				android:paddingEnd="10dp"
+				app:tabBackground="@android:color/transparent"
+				app:tabGravity="start"
+				app:tabIndicator="@drawable/tab_indicator"
+				app:tabIndicatorColor="@color/accent"
+				app:tabIndicatorFullWidth="false"
+				app:tabIndicatorHeight="5dp"
+				app:tabMode="scrollable"
+				app:tabPaddingEnd="10dp"
+				app:tabPaddingStart="10dp"
+				app:tabRippleColor="@android:color/transparent"
+				app:tabSelectedTextColor="@color/accent"
+				app:tabTextAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
+				app:tabTextColor="?attr/colorReact"/>
+			 
+			<androidx.recyclerview.widget.RecyclerView
+				android:id="@+id/RecyclerBlogCat"
+				android:clickable="true"
+				android:focusable="false"
+				android:focusableInTouchMode="true"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:nestedScrollingEnabled="false"
+				android:scrollbars="none"
+				android:paddingStart="10dp"
+				android:paddingEnd="10dp"
+				android:layout_marginTop="10dp" />
+			 
+			<View
+				android:layout_width="match_parent"
+				android:layout_height="20dp" />
+
+			<ViewStub
+				android:id="@+id/viewStubPopular"
+				android:inflatedId="@+id/stubViewPopular"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:paddingStart="10dp"
+				android:paddingEnd="10dp"
+				android:layout="@layout/TemplateRecyclerViewLayout" />
+			  
+			<androidx.recyclerview.widget.RecyclerView
+				android:id="@+id/RecyclerBlog"
+				android:clickable="true"
+				android:focusable="false"
+				android:focusableInTouchMode="true"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:nestedScrollingEnabled="false"
+				android:scrollbars="none"
+				android:paddingBottom="50dp"
+				android:paddingStart="10dp"
+				android:paddingEnd="10dp"
+				android:paddingTop="10dp" />
+
+			<View
+				android:layout_width="match_parent"
+				android:layout_height="10dp" />
+
+			<com.google.android.gms.ads.admanager.AdManagerAdView
+			   android:id="@+id/multiple_ad_sizes_view"
+			   android:layout_width="match_parent"
+			   android:layout_height="wrap_content"
+			   android:padding="5dp" 
+			   android:background="?attr/colorSecondaryExtra"
+			   app:adSize="MEDIUM_RECTANGLE,120x20,250x250,320x100,SMART_BANNER"
+			   app:adUnitId="@string/banner_multiple_ad_sizes_id" />
+			
+			<View
+				android:layout_width="match_parent"
+				android:layout_height="20dp" />
+
+		</LinearLayout>
+	</androidx.core.widget.NestedScrollView>
+</LinearLayout>

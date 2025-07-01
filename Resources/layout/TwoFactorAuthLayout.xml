@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="?attr/colorFill"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        app:theme="@style/ToolbarTheme" 
+        app:title="@string/Lbl_TwoFactor"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:titleTextAppearance="@style/Toolbar.TitleText"
+        android:background="?attr/colorFill">
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="fill_vertical"
+        android:background="?attr/colorFill"
+        android:layout_marginBottom="1dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_gravity="fill_vertical"
+            android:background="?attr/colorFill"
+            >
+
+            <TextView
+                android:layout_width="286dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/describe"
+                android:text="@string/Lbl_TwoFactor"
+                android:textStyle="normal" 
+                android:textFontWeight="600"
+                android:textSize="24dp"
+                android:lineHeight="32dp"
+                android:layout_marginStart="12dp"
+                />
+
+            <TextView
+                android:layout_width="286dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/description"
+                android:layout_marginTop="8dp"
+                android:text="@string/Lbl_Describe_TwoFactor"
+                android:layout_marginStart="12dp"
+                android:layout_marginEnd="12dp"
+                android:textColor="?attr/colorReact"
+                android:textFontWeight="400"
+                android:textSize="14dp"
+                android:lineHeight="18dp"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:gravity="center_vertical"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal"
+                >
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginStart="12dp"
+                    android:src="@drawable/pif_mail"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textFontWeight="500"
+                    android:textSize="18dp"
+                    android:lineHeight="24dp"
+                    android:layout_marginStart="12dp"
+                    android:text="@string/Lbl_Email"
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    >
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end|center"
+                        android:layout_marginEnd="12dp"
+					    >
+
+                        <Switch
+                            android:id="@+id/SwitchPIP"
+                            android:textFontWeight="500"
+						    android:textSize="14dp"
+						    android:lineHeight="20dp"
+						    android:translationY="0dp"
+						    android:layout_centerVertical="true"
+						    
+						    android:layout_alignParentEnd="true"
+						    android:layout_marginTop="0dp"
+						    android:layout_marginEnd="10dp"
+						    android:layout_marginBottom="0dp"
+						    android:layout_width="wrap_content"
+						    android:layout_height="wrap_content" 
+						    android:track="@drawable/pif_toggle_track"
+						    android:thumb="@drawable/pif_toggle_thumb"
+                            android:layout_gravity="end|center"
+                            android:checked="false"
+                            />
+                    </FrameLayout>
+                </LinearLayout>
+                
+            </LinearLayout>
+			 
+            <PlayTube.Helpers.Ads.TemplateView  
+              android:id="@+id/my_template"
+              android:padding="8dp"
+              app:gnt_template_type="@layout/gnt_nativecontentad_view"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="10dp"
+              android:layout_gravity="bottom"
+              android:visibility="gone"
+              android:layout_alignParentBottom="true"
+              android:layout_centerHorizontal="true" />
+			 
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

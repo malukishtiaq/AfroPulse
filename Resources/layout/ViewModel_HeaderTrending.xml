@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:orientation="horizontal"
+              android:id="@+id/HeaderTrendingLayout"
+              android:layout_width="match_parent"
+              android:layout_height="84dp"
+              android:layout_margin="10dp"
+              android:weightSum="3">
+	
+	<androidx.cardview.widget.CardView
+		android:id="@+id/ChannelCard"
+		android:layout_width="112dp"
+		android:layout_height="84dp"
+		android:layout_weight="1"
+		app:cardCornerRadius="0dp"
+		app:cardBackgroundColor="?attr/colorFill"
+		android:layout_margin="0dp"
+		android:paddingTop="0dp"
+		app:cardElevation="0dp">
+
+		<LinearLayout
+			android:orientation="vertical"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:id="@+id/ChannelButton"
+			android:layout_gravity="center_vertical"
+			android:gravity="center_vertical">
+			<ImageView
+				android:id="@+id/ChannelIcon"
+				android:layout_width="56dp"
+				android:layout_height="56dp"
+				android:src="@drawable/pif_trending_popular_channels"
+				android:layout_gravity="center"
+				android:gravity="center" />
+			<TextView
+				android:id="@+id/ChannelText"
+				android:text="@string/Lbl_PopularChannels"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:textFontWeight="500"
+				android:textSize="14dp"
+				android:lineHeight="20dp"
+				android:layout_gravity="center"
+				android:gravity="center"
+				android:textColor="?attr/colorReact"
+				android:layout_marginTop="5dp" />
+		</LinearLayout>
+
+	</androidx.cardview.widget.CardView>
+
+	<androidx.cardview.widget.CardView
+		android:id="@+id/MoviesCard"
+		android:layout_width="112dp"
+		android:layout_height="84dp"
+		android:layout_weight="1"
+		app:cardCornerRadius="0dp"
+		app:cardBackgroundColor="?attr/colorFill"
+		android:layout_margin="0dp"
+		android:paddingTop="0dp"
+		app:cardElevation="0dp">
+
+		<LinearLayout
+			android:orientation="vertical"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:id="@+id/MoviesButton"
+			android:layout_gravity="center_vertical"
+			android:gravity="center_vertical">
+			<ImageView
+				android:id="@+id/MoviesIcon"
+				android:layout_width="56dp"
+				android:layout_height="56dp"
+				android:src="@drawable/pif_trending_movies"
+				android:layout_gravity="center"
+				android:gravity="center" />
+			<TextView
+				android:id="@+id/MoviesText"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:textFontWeight="500"
+				android:textSize="14dp"
+				android:lineHeight="20dp"
+				android:textColor="?attr/colorReact"
+				android:layout_gravity="center"
+				android:gravity="center"
+				android:text="@string/Lbl_Movies"
+				android:layout_marginTop="5dp" />
+		</LinearLayout>
+
+	</androidx.cardview.widget.CardView>
+
+	<androidx.cardview.widget.CardView
+		android:id="@+id/ArticleCard"
+		android:layout_width="112dp"
+		android:layout_height="84dp"
+		android:layout_weight="1"
+		app:cardCornerRadius="0dp"
+		app:cardBackgroundColor="?attr/colorFill"
+		android:layout_margin="0dp"
+		android:paddingTop="0dp"
+		app:cardElevation="0dp">
+
+		<LinearLayout
+			android:orientation="vertical"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:layout_gravity="center_vertical"
+			android:gravity="center_vertical"
+			android:id="@+id/ArticleButton">
+			<ImageView
+				android:id="@+id/ArticleIcon"
+				android:layout_width="56dp"
+				android:layout_height="56dp"
+				android:src="@drawable/pif_trending_articles"
+				android:layout_gravity="center"
+				android:gravity="center" />
+			<TextView
+				android:id="@+id/ArticleText"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:textFontWeight="500"
+				android:textSize="14dp"
+				android:lineHeight="20dp"
+				android:textColor="?attr/colorReact"
+				android:layout_gravity="center"
+				android:gravity="center"
+				android:text="@string/Lbl_Article"
+				android:layout_marginTop="5dp" />
+		</LinearLayout>
+
+	</androidx.cardview.widget.CardView>
+	
+</LinearLayout>

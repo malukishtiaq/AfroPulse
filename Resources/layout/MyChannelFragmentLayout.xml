@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android" 
+    xmlns:app="http://schemas.android.com/apk/res-auto" 
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:ignore="RtlHardcoded"
+    >
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/mymainAppBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.MaterialComponents.Dark.ActionBar">
+        
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/mycollapsingToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:contentScrim="@color/accent"
+            android:background="@xml/framealfacolor"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            app:collapsedTitleTextAppearance="@style/TextAppearance.MyApp.Title.Collapsed"
+            app:expandedTitleTextAppearance="@style/TextAppearance.MyApp.Title.Expanded"
+            >
+           
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:gravity="bottom"
+                android:orientation="vertical"
+                android:focusable="false"
+                android:background="?attr/colorFill"
+                android:visibility="visible">
+
+                <!--Top-->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="232dp"
+                    android:background="?attr/colorFill"
+                    >
+
+                    <ImageView
+                        android:id="@+id/myImagevideo"
+                        android:layout_width="match_parent"
+                        android:layout_height="204dp"
+                        android:scaleType="centerCrop"
+                        android:background="@xml/gradientblack"
+                        />
+
+                    <!--Channel Name & Verified-->
+
+                    <LinearLayout
+                        android:id="@+id/myinfo_container"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"       
+                        android:layout_marginTop="40dp"
+                        android:layout_marginBottom="16dp" 
+                        android:orientation="vertical"
+                        >
+
+                        <ImageView
+                            android:id="@+id/myChannelImage"
+                            android:layout_width="88dp"
+                            android:layout_height="88dp"
+                            android:scaleType="centerCrop" 
+                            />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center"
+                            >
+
+                            <TextView
+                                android:id="@+id/myChannelName"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Username"
+                                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+                                android:textColor="@color/LightColor" 
+                                android:textStyle="normal"
+                                android:textFontWeight="600"
+                                android:textSize="22dp"
+                                android:lineHeight="28dp"
+                                />
+                        
+                            <ImageView
+                                android:id="@+id/myChannelVerifiedText" 
+                                android:layout_width="21dp"
+                                android:layout_height="21dp"
+                                android:textColor="@color/accent"
+                                android:src="@drawable/pif_check_mark"
+                                android:layout_gravity="center"
+                                android:layout_marginStart="10dp"
+                            />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_below="@+id/circlelayout"
+                        android:id="@+id/subcribebuttons"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:layout_marginTop="172dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp">
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/mySubcribeChannelButton"
+                            android:layout_width="144dp"
+                            android:layout_height="44dp"
+                            android:layout_centerHorizontal="true"
+                            android:text="@string/Lbl_Edit"
+                            android:background="@drawable/pif_btn_round_two"
+                            android:textStyle="normal"
+                            android:textFontWeight="500"
+                            android:textSize="18dp"
+                            android:lineHeight="22dp"
+                            android:layout_marginTop="0dp"
+                            android:paddingStart="17dp"
+                            android:paddingEnd="17dp"
+                            android:backgroundTint="@color/accent"
+                            android:layout_marginEnd="5dp"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:textColor="@color/LightColor"
+                            android:textAllCaps="false"/>
+                    </LinearLayout>
+                    
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="264dp"
+                    android:layout_height="68dp"
+                    android:weightSum="2"
+                    android:gravity="center_vertical"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal"
+                    >
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        >
+
+                        <TextView
+                            android:id="@+id/subcriberscount"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:textFontWeight="600"
+                            android:textSize="20dp"
+                            android:lineHeight="28dp"
+                            android:textAlignment="center"
+                            />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="@string/Lbl_Subscribers"
+                            android:textFontWeight="400"
+                            android:textSize="14dp"
+                            android:lineHeight="16dp"
+                            android:textAlignment="center"
+                            android:textColor="?attr/colorReact"
+                            />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        >
+                        <TextView
+                            android:id="@+id/videocount"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:textFontWeight="600"
+                            android:textSize="20dp"
+                            android:lineHeight="28dp"
+                            android:textAlignment="center"
+                            />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="@string/Lbl_Videos"
+                            android:textFontWeight="400"
+                            android:textSize="14dp"
+                            android:lineHeight="16dp"
+                            android:textAlignment="center"
+                            android:textColor="?attr/colorReact"
+                            />
+                    </LinearLayout>
+    
+                </LinearLayout>
+
+                <com.google.android.material.tabs.TabLayout
+                    android:id="@+id/mychanneltabs"
+                    app:tabMode="scrollable"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    app:layout_collapseMode="pin"
+                    app:tabSelectedTextColor="@color/accent"
+                    app:tabTextAppearance="@style/TabFontAppearance"
+                    app:tabTextColor="?attr/colorReact"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#EDEEF1"
+                    android:layout_marginTop="0dp"
+                    />
+
+            </LinearLayout>
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                app:titleTextAppearance="@style/Toolbar.TitleText"
+                android:background="#00000000"
+                app:layout_collapseMode="pin">
+
+                <ImageView
+                    android:id="@+id/mySettings_icon"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:tint="@color/LightColor"
+                    android:src="@drawable/pif_video_player_menu_setting"
+                    android:layout_gravity="end|center"
+                    android:gravity="end"
+                    android:padding="5dp"
+                    android:layout_weight="0.23"
+                    android:layout_marginEnd="13dp" 
+                />
+              
+            </androidx.appcompat.widget.Toolbar>
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+        
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/myChannelviewpager"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="5dp"
+        android:paddingBottom="0dp" 
+    />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

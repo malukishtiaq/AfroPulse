@@ -1,0 +1,389 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:background="?attr/colorFill"
+	android:id="@+id/root"
+	android:orientation="vertical">
+	<com.google.android.material.appbar.AppBarLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:theme="@style/ThemeOverlay.MaterialComponents.Dark.ActionBar">
+		<androidx.appcompat.widget.Toolbar
+			android:id="@+id/toolbar"
+			android:layout_width="match_parent"
+			android:layout_height="48dp"
+			app:theme="@style/ToolbarTheme"
+			app:layout_scrollFlags="scroll|enterAlways"
+			app:titleTextAppearance="@style/Toolbar.TitleText"
+			android:background="?attr/colorFill"
+			android:elevation="0dp">
+		</androidx.appcompat.widget.Toolbar>
+	</com.google.android.material.appbar.AppBarLayout>
+	<androidx.core.widget.NestedScrollView
+		android:id="@+id/nested_scroll_view"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:background="?attr/colorFill"
+		android:clipToPadding="false"
+		android:scrollbars="none"
+		android:scrollingCache="true"
+		app:layout_behavior="@string/appbar_scrolling_view_behavior">
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="vertical"
+			android:padding="15dp">
+
+			<FrameLayout
+				android:id="@+id/Image_container"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:orientation="vertical">
+				<ImageView
+					android:id="@+id/imageBlog"
+					android:layout_width="match_parent"
+					android:layout_height="250dp"
+					android:src="@drawable/ImagePlacholder" />
+				<TextView
+					android:id="@+id/textCategory"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:textColor="@color/gnt_white"
+					android:textSize="12dp"
+					android:textStyle="normal"
+					android:layout_margin="10dp"
+					android:background="@xml/rounded_corner"
+					android:backgroundTint="#43a047"
+					android:layout_gravity="bottom|start" />
+			</FrameLayout>
+
+			<TextView
+				android:id="@+id/Title"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:textSize="18dp"
+				android:layout_marginTop="15dp"
+				android:gravity="start" />
+
+			<TextView
+				android:id="@+id/info"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:textSize="13dp"
+				android:layout_marginTop="8dp"
+				android:textColor="?attr/colorReact"
+				android:gravity="start" />
+			 
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="8dp"
+				android:weightSum="5"
+				android:orientation="horizontal">
+
+				<androidx.cardview.widget.CardView
+					android:id="@+id/cardview1"
+					android:layout_width="wrap_content"
+					android:layout_height="80dp"
+					android:layout_weight="3"
+					app:cardCornerRadius="12dp"
+					app:cardBackgroundColor="?attr/colorFill"
+					android:layout_marginBottom="5dp"
+					android:layout_marginEnd="5dp"
+					android:layout_marginTop="5dp"
+					android:paddingTop="5dp"
+					app:cardElevation="2dp">
+
+					<LinearLayout
+						android:orientation="horizontal"
+						android:layout_width="match_parent"
+						android:layout_height="match_parent"
+						android:layout_gravity="center_vertical"
+						android:gravity="center_vertical">
+						
+						<ImageView
+							android:id="@+id/Image_Channel"
+							android:layout_width="40dp"
+							android:layout_height="40dp"
+							android:scaleType="centerCrop"
+							android:layout_gravity="start|center_vertical"
+							android:gravity="start|center_vertical"
+							android:src="@drawable/no_profile_image_circle"
+							android:layout_marginStart="8dp"
+							android:layout_marginEnd="8dp" />
+
+						<LinearLayout
+							android:layout_width="match_parent"
+							android:layout_height="wrap_content"
+							android:layout_gravity="center_vertical"
+							android:gravity="center_vertical"
+							android:orientation="vertical">
+							<TextView
+								android:id="@+id/ChannelName"
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:lines="1"
+								android:drawablePadding="5dp"
+								android:layout_gravity="center_vertical"
+								android:gravity="center_vertical"
+								android:layout_marginEnd="5dp"
+								android:textColor="?attr/colorReact"
+								android:textSize="13dp"/>
+
+							<TextView
+								android:id="@+id/ChannelViews"
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:ellipsize="none"
+								android:layout_gravity="center_vertical"
+								android:gravity="center_vertical"
+								android:lines="1"
+								android:textColor="?attr/colorReact"
+								android:textSize="13dp"
+								android:focusable="false"
+								android:clickable="false" />
+
+						</LinearLayout>
+
+					</LinearLayout>
+
+				</androidx.cardview.widget.CardView>
+
+				<androidx.cardview.widget.CardView
+					android:id="@+id/cardview2"
+					android:layout_width="60dp"
+					android:layout_height="80dp"
+					android:layout_weight="1"
+					app:cardCornerRadius="12dp"
+					app:cardBackgroundColor="?attr/colorFill"
+					android:layout_margin="5dp"
+					android:paddingTop="5dp"
+					app:cardElevation="2dp">
+
+					<LinearLayout
+						android:orientation="vertical"
+						android:layout_width="match_parent"
+						android:layout_height="match_parent"
+						android:id="@+id/LikeButton"
+						android:layout_gravity="center_vertical"
+						android:gravity="center_vertical">
+						<ImageView
+							android:id="@+id/LikeIcon"
+							android:layout_width="24dp"
+							android:layout_height="24dp"
+							android:src="@drawable/icon_likefilled_video_vector"
+							android:tint="#a7a7a7"
+							android:layout_gravity="center"
+							android:gravity="center" />
+						<TextView
+							android:id="@+id/LikeNumber"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:textSize="12sp"
+							android:layout_gravity="center"
+							android:gravity="center"
+							android:text="0"
+							android:layout_marginTop="5dp" />
+					</LinearLayout>
+
+				</androidx.cardview.widget.CardView>
+
+				<androidx.cardview.widget.CardView
+					android:id="@+id/cardview3"
+					android:layout_width="60dp"
+					android:layout_height="80dp"
+					android:layout_weight="1"
+					app:cardCornerRadius="12dp"
+					app:cardBackgroundColor="?attr/colorFill"
+					android:layout_margin="5dp"
+					android:paddingTop="5dp"
+					app:cardElevation="2dp">
+
+					<LinearLayout
+						android:orientation="vertical"
+						android:layout_width="match_parent"
+						android:layout_height="match_parent"
+						android:layout_gravity="center_vertical"
+						android:gravity="center_vertical"
+						android:id="@+id/UnLikeButton">
+						<ImageView
+							android:id="@+id/UnLikeIcon"
+							android:layout_width="24dp"
+							android:layout_height="24dp"
+							android:src="@drawable/icon_likefilled_video_vector"
+							android:tint="#a7a7a7"
+							android:rotation="180"
+							android:layout_gravity="center"
+							android:gravity="center" />
+						<TextView
+							android:id="@+id/UnLikeNumber"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:textSize="12sp"
+							android:layout_gravity="center"
+							android:gravity="center"
+							android:text="0"
+							android:layout_marginTop="5dp" />
+					</LinearLayout>
+
+				</androidx.cardview.widget.CardView>
+
+			</LinearLayout>
+			  
+			<TextView
+				android:id="@+id/description"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:textSize="15dp"
+				android:layout_marginTop="8dp"
+				android:layout_marginBottom="8dp"
+				android:textColor="?attr/colorReact"
+				android:text="@string/Lbl_Description"
+				android:gravity="start" />
+
+			<WebView
+				android:layout_width="match_parent"
+				android:padding="10dp"
+				android:layout_height="wrap_content"
+				android:id="@+id/LocalWebView" />
+
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="8dp"
+				android:orientation="horizontal" >
+				<TextView
+					android:id="@+id/Comments"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:gravity="start"
+					android:text="@string/Lbl_Comments"
+					android:textSize="16sp"/>
+
+				<View
+					android:layout_width="0dp"
+					android:layout_height="1dp"
+					android:layout_weight="1"/>
+
+				<TextView
+					android:id="@+id/countComments"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:textSize="13sp"
+					android:text="0" />
+
+			</LinearLayout>
+
+			<View
+				android:layout_width="match_parent"
+				android:layout_height="2dp"
+				android:layout_marginTop="5dp"
+				android:background="?attr/colorDivider" />
+
+			<LinearLayout
+				android:orientation="vertical"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:background="?attr/colorFill"
+				android:padding="5dp">
+				<androidx.recyclerview.widget.RecyclerView
+					android:id="@+id/recyler"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:scrollbars="vertical"
+					android:paddingBottom="55dp"/>
+				<ViewStub
+					android:id="@+id/viewStub"
+					android:inflatedId="@+id/subView"
+					android:layout_marginTop="35dp"
+					android:layout_centerInParent="true"
+					android:layout_gravity="center"
+					android:gravity="center"
+					android:layout="@layout/EmptyStateLayout"
+					android:layout_width="match_parent"
+					android:layout_height="350dp" />
+				<ProgressBar
+					android:layout_centerInParent="true"
+					android:id="@+id/sectionProgress"
+					android:indeterminate="true"
+					android:indeterminateTintMode="src_atop"
+					android:indeterminateTint="#999"
+					android:layout_width="50dp"
+					android:layout_height="50dp"
+					android:foregroundGravity="center"
+					android:layout_gravity="center" />
+			</LinearLayout>
+			  
+		</LinearLayout>
+	</androidx.core.widget.NestedScrollView> 
+	
+	<LinearLayout
+		android:id="@+id/commentButton"
+		android:layout_width="match_parent"
+		android:layout_height="55dp"
+		android:orientation="horizontal"
+		android:layout_gravity="bottom"
+		android:paddingEnd="15dp"
+		android:paddingStart="15dp"
+		android:background="?attr/colorFill">
+		
+		<ImageView
+			android:id="@+id/userImage"
+			android:layout_width="40dp"
+			android:layout_height="40dp"
+			android:scaleType="centerCrop"
+			android:layout_gravity="center"
+			android:src="@drawable/no_profile_image_circle"
+			android:layout_marginEnd="12dp" />
+	 
+		<LinearLayout
+			android:weightSum="10"
+			android:layout_width="match_parent"
+			android:background="@drawable/EditTextStyleOne"
+			android:layout_gravity="center_vertical"
+			android:gravity="center_vertical"
+			android:orientation="horizontal"
+			android:layout_height="40dp">
+			<developer.semojis.Helper.EmojiconEditText
+				android:id="@+id/EmojiconEditText5"
+				android:layout_width="wrap_content"
+				android:layout_height="40dp"
+				android:layout_weight="10"
+				android:hint="@string/Lbl_YourComment"
+				android:textSize="14sp"
+				app:emojiconSize="23sp"
+				android:gravity="start|center"
+				android:layout_gravity="start|center"
+				android:background="@null"  
+				android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"
+				android:singleLine="true" />
+			<ImageView
+				android:id="@+id/emojiIcon"
+				android:layout_width="30dp"
+				android:layout_height="match_parent"
+				android:layout_weight="1"
+				android:background="?attr/selectableItemBackgroundBorderless"
+				android:src="@drawable/icon_smile_vector"
+				android:tint="#7C858E"
+				android:gravity="center"
+				android:layout_gravity="center"
+				android:layout_marginEnd="5dp"
+				android:layout_marginStart="3dp"  />
+			<ImageView
+				android:id="@+id/sendButton"
+				android:layout_width="30dp"
+				android:layout_height="match_parent"
+				android:layout_weight="1"
+				android:background="?attr/selectableItemBackgroundBorderless"
+				android:src="@drawable/ic_send_vector"
+				android:tint="#7C858E"
+				android:gravity="center"
+				android:layout_gravity="center"
+				android:layout_marginEnd="5dp"
+				android:layout_marginStart="3dp"  />
+		</LinearLayout> 
+	</LinearLayout>  
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/colorFill"
+    android:clickable="true"
+    android:focusable="true"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent" 
+		android:layout_height="48dp"  
+		app:theme="@style/ToolbarTheme" 
+		android:layout_gravity="top"
+		app:layout_collapseMode="pin"
+		app:titleTextAppearance="@style/Toolbar.TitleText" 
+		android:background="?attr/colorFill"
+		android:elevation="0dp">
+
+        <TextView
+            android:id="@+id/toolbar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textFontWeight="600"
+            android:textSize="18dp"
+            android:lineHeight="24dp"
+            android:text="@string/Lbl_Withdrawals"
+            />
+
+        </androidx.appcompat.widget.Toolbar>
+
+    <LinearLayout
+        android:id="@+id/MonetizationLiner"
+        android:layout_width="match_parent"
+        android:layout_height="88dp"
+        android:orientation="vertical"
+		android:layout_marginTop="0dp"
+        android:background="?attr/colorSecondaryExtra"
+        android:gravity="center|start"
+        >
+
+		<TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:textColor="?attr/colorReact"
+            android:gravity="start"
+			android:text="@string/Lbl_MyBalance"
+            android:layout_marginStart="12dp"
+            android:textFontWeight="400"
+			android:textSize="14dp"
+            android:lineHeight="18dp"
+            android:textAlignment="textStart" /> 
+
+        <TextView
+		    android:id="@+id/countBalnceText" 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+		    android:text="$0.00"
+            android:layout_marginStart="12dp"
+            android:textFontWeight="600"
+		    android:textSize="20dp"
+            android:lineHeight="24dp"
+            android:textAlignment="textStart" /> 
+
+    </LinearLayout> 
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/PifInputStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp"
+        app:boxStrokeWidth="1dp"
+        app:boxCornerRadiusTopStart="40dp"
+        app:boxCornerRadiusTopEnd="40dp"
+        app:boxCornerRadiusBottomStart="40dp"
+        app:boxCornerRadiusBottomEnd="40dp"
+        app:endIconMode="custom"
+        app:hintTextAppearance="@style/PifInputStyleHint"
+        >
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:id="@+id/Monetization_Edit"
+            android:ems="10"
+            android:hint="Amount"
+            android:lineHeight="20dp"
+            android:singleLine="true"
+            android:paddingStart="32dp"
+            android:textFontWeight="500"
+            android:textSize="18dp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/PifInputStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp"
+        app:boxStrokeWidth="1dp"
+        app:boxCornerRadiusTopStart="40dp"
+        app:boxCornerRadiusTopEnd="40dp"
+        app:boxCornerRadiusBottomStart="40dp"
+        app:boxCornerRadiusBottomEnd="40dp"
+        app:endIconMode="custom"
+        app:hintTextAppearance="@style/PifInputStyleHint"
+        >
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:id="@+id/PayPalEmail_Edit"
+            android:ems="10"
+            android:hint="Paypal email"
+            android:lineHeight="20dp"
+            android:paddingStart="32dp"
+            android:textFontWeight="500"
+            android:textSize="18dp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_withdraw"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_centerHorizontal="true"
+        android:text="@string/Lbl_withdraw"
+        android:background="@drawable/pif_btn_round_two"
+        android:textStyle="normal"
+        android:textFontWeight="500"
+        android:textSize="18dp"
+        android:lineHeight="22dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginTop="28dp"
+        android:paddingStart="17dp"
+        android:paddingEnd="17dp"
+        android:backgroundTint="@color/accent"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:textColor="@color/LightColor"
+        android:textAllCaps="false"
+        />
+
+	<RelativeLayout 
+		android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+		<com.google.android.gms.ads.AdView
+			android:id="@+id/adView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            app:adSize="SMART_BANNER"
+            app:adUnitId="@string/banner_ad_unit_id"
+            android:layout_gravity="center"
+	        android:layout_alignParentBottom="true"/>
+	</RelativeLayout> 
+</LinearLayout>

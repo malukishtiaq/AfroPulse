@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="horizontal"
+	android:layout_width="match_parent"
+	android:layout_height="60dp"
+	android:background="?attr/selectableItemBackground"
+	android:gravity="center_vertical"
+	>
+
+	<ImageView
+		android:layout_width="44dp"
+		android:layout_height="44dp"
+		android:id="@+id/PlayListIcon"
+		android:layout_marginEnd="12dp"
+	/>
+
+	<LinearLayout
+		android:layout_width="wrap_content"
+		android:layout_height="44dp"
+		android:orientation="vertical">
+
+		<TextView
+			android:id="@+id/PlayListName"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:textAllCaps="false"
+			android:layout_gravity="start|center"
+			android:textFontWeight="500"
+			android:textSize="18dp"
+			android:lineHeight="24dp"
+		/>
+
+		<TextView
+			android:id="@+id/PlayListCount"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:ellipsize="none"
+			android:lines="1"
+			android:text="@string/Lbl_NoVideos"
+			android:textColor="?attr/colorReact"
+			android:layout_gravity="start|center"
+			android:textFontWeight="400"
+			android:textSize="16dp"
+			android:lineHeight="20dp"
+			android:focusable="false"
+			android:clickable="false" />
+
+	</LinearLayout>
+
+	<View
+		android:layout_width="wrap_content"
+		android:layout_height="1dp"
+		android:layout_weight="1"/>
+
+	<FrameLayout
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_gravity="end"
+		android:layout_marginEnd="12dp">
+
+		<ImageView
+			android:id="@+id/videoMenu"
+			android:layout_width="36dp"
+			android:layout_height="36dp"
+			android:padding="10dp"
+			android:layout_weight="1"
+			android:gravity="center"
+			android:layout_gravity="top|end"
+			android:layout_alignParentEnd="true"
+			android:layout_marginHorizontal="3dp"
+			android:background="?android:attr/selectableItemBackgroundBorderless"
+			android:tint="?attr/colorReact"
+			android:src="@drawable/pif_more" />
+	</FrameLayout>
+
+</LinearLayout>

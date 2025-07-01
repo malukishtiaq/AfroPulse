@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<resources>
+
+	<!--add your website without http >> demo.playtubescript.com-->
+	<string name="ApplicationUrlWeb">https://apulse.africa
+</string>
+	<string name="ApplicationShortUrl">ptub.app</string>
+
+	<!-- #warning about new privacy on google AdMob...
+	should add file app-ads.txt in the server >>this content file text https://prnt.sc/vm086w
+	and the link should example: https://www.demo.com/app-ads.txt -->
+	<!--ADMOB APPLICATION_ID >> ca-app-pub-xxxxxxxxxxxxxxxx~yyyyyyyyyy-->
+	<string name="admob_app_id">ca-app-pub-5135691635931982~1514279535</string>
+	<string name="banner_ad_unit_id">ca-app-pub-5135691635931982/7672722025</string>
+	<string name="banner_multiple_ad_sizes_id">ca-app-pub-5135691635931982/1603063389</string>
+	<string name="ad_attribution">Ad</string>
+	<!--===============================================================-->
+
+	<!--facebook ID-->
+	<string name="facebook_app_id">1052139406090121</string>
+	<string name="fb_login_protocol_scheme">fb1052139406090121</string>
+	<!--https://developers.facebook.com/docs/android/getting-started#client-token-->
+	<string name="facebook_client_token">48b8116945461fbee0deffd0260eaf3f</string>
+	<string name="icon_desc">Ad icon</string>
+	<string name="image_desc">Ad image</string>
+	<string name="sponsored">Sponsored</string>
+	<!--===============================================================-->
+
+	<!--google ID >> Google Login - Map - YouTube Player  https://prnt.sc/vysrsw -->
+	<string name="google_key">AIzaSyD7od5x0TX_msWvHaSFBGBoIeI2TbqpWOg</string>
+
+	<string name="razorpay_api_Key">rzp_test_ruzI7R7AkonOIi</string>
+
+	<!--applovin-->
+	<string name="applovin_key">SxMabBT0TXbgZEUdyrgV-cu_PA2AgCaVLN5TORmuM2SFcx6iXQRAzVzdTC4OoMewfzlqnKcF8ZQIHrqEfcIb2S</string>
+
+</resources>

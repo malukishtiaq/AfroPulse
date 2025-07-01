@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:id="@+id/cardview2"
+	android:layout_gravity="fill"
+	android:layout_width="match_parent"
+	android:layout_height="128dp"
+	app:cardCornerRadius="0dp"
+	app:cardBackgroundColor="?attr/colorFill"
+	android:layout_margin="0dp"
+	android:paddingTop="5dp"
+	app:cardElevation="0dp"
+	android:outlineAmbientShadowColor="?attr/colorFill"
+	android:outlineSpotShadowColor="?attr/colorFill">
+
+    <RelativeLayout
+		android:orientation="vertical"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        >
+        
+		<FrameLayout
+			android:layout_width="80dp"
+			android:layout_height="104dp"
+			android:layout_marginStart="12dp"
+			android:orientation="vertical">
+            
+			<ImageView
+				android:id="@+id/Imagevideo"
+				android:layout_width="80dp"
+                android:layout_height="104dp"
+				android:scaleType="centerCrop"
+				android:src="@drawable/ImagePlacholder" />
+            
+			<TextView
+				android:id="@+id/videoType"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_alignParentTop="true"
+				android:textColor="@color/gnt_white"
+				android:textSize="12dp"
+				android:visibility="gone"
+				android:textStyle="normal"
+                android:layout_marginStart="12dp"
+				android:layout_marginTop="0dp"
+				android:background="@drawable/ThirdpartyRoundText"
+				android:backgroundTint="#6441A4" />
+
+			<TextView
+				android:id="@+id/duration"
+				android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+				android:layout_marginBottom="8dp"
+				android:paddingStart="6dp"
+                android:paddingTop="6dp"
+				android:paddingEnd="6dp"
+                android:paddingBottom="6dp"
+				android:visibility="gone"
+				android:layout_gravity="bottom|end"
+                android:textColor="@color/LightColor"
+                android:textFontWeight="500"
+				android:textSize="14dp"
+                android:lineHeight="20dp"
+				android:textStyle="normal"
+				android:background="@xml/rounded_corner"
+				android:text="00:00"
+				/>
+
+			<TextView
+				android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginEnd="4dp"
+				android:layout_marginBottom="6dp"
+				android:visibility="visible"
+				android:layout_gravity="bottom|end"
+				android:background="@drawable/icon_shorts_vector"
+				/>
+		</FrameLayout>
+
+		<ProgressBar
+			android:id="@+id/Progress"
+			android:layout_width="match_parent"
+			android:layout_height="5dp"
+			style="?android:attr/progressBarStyleHorizontal"
+			android:visibility="gone" />
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="102dp"
+			android:orientation="horizontal"
+            android:layout_marginStart="104dp"
+			android:padding="0dp"
+			android:layout_gravity="center_vertical"
+			android:gravity="top">
+
+			<LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+				android:orientation="horizontal"
+				android:visibility="visible"
+				android:weightSum="10"
+				>
+
+				<LinearLayout
+					android:id="@+id/info_container"
+					android:layout_width="144dp"
+					android:layout_height="wrap_content"
+					android:orientation="vertical"
+					android:paddingStart="0dp"
+					android:paddingEnd="0dp"
+					android:layout_gravity="center_vertical"
+					android:gravity="top"
+					android:layout_weight="9"
+					android:paddingTop="0dp"
+					android:paddingBottom="8dp">
+			
+					<TextView
+						android:id="@+id/Title"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:textSize="18dp"
+						android:typeface="normal"
+						android:gravity="start"
+						android:lineHeight="22dp"
+						android:textFontWeight="500"
+						android:maxLines="3" />
+
+					<TextView
+						android:id="@+id/ChannelName"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:lines="1"
+						android:layout_marginEnd="5dp"
+						android:drawablePadding="5dp"
+						android:textColor="?attr/colorReact"
+						android:lineHeight="18dp"
+						android:textFontWeight="400"
+						android:textSize="14dp"/>
+					<TextView
+						android:id="@+id/Views_Count"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:lines="1"
+						android:textColor="?attr/colorReact"
+						android:lineHeight="18dp"
+						android:textFontWeight="400"
+						android:textSize="14dp"/> 
+				</LinearLayout>
+
+				<LinearLayout
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:gravity="center"
+					android:layout_gravity="end" >
+
+					<ImageView
+						android:id="@+id/videoMenu"
+						android:layout_width="36dp"
+						android:layout_height="36dp"
+						android:padding="10dp"
+						android:layout_weight="1" 
+						android:gravity="center"
+						android:layout_gravity="top|end"
+						android:layout_marginHorizontal="3dp"
+						android:background="?android:attr/selectableItemBackgroundBorderless"
+						android:tint="?attr/colorReact"
+						android:src="@drawable/pif_more" />
+				</LinearLayout>
+			</LinearLayout>
+			
+		</LinearLayout>
+	</RelativeLayout>
+</androidx.cardview.widget.CardView>

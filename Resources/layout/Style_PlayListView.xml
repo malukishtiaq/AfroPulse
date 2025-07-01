@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="128dp"
+    android:background="?attr/colorFill"
+    android:orientation="vertical"
+    android:layout_margin="0dp"
+    android:gravity="center_vertical"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        >
+        <RelativeLayout
+            android:id="@+id/mainliner_container"
+            android:layout_width="match_parent"
+            android:layout_height="104dp"
+            android:clickable="false"
+            android:focusable="false"
+            android:orientation="horizontal"
+            android:layout_gravity="center_vertical"
+            >
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardview2"
+                android:layout_gravity="fill"
+                android:layout_width="164dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="0dp"
+                android:layout_marginStart="12dp"
+                app:cardBackgroundColor="?attr/colorFill"
+                app:cardCornerRadius="7dp"
+                app:cardElevation="0dp"
+                >
+
+                <RelativeLayout
+                    android:id="@+id/Image_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <ImageView
+                        android:id="@+id/Imagevideo"
+                        android:layout_width="164dp"
+                        android:layout_height="104dp"
+                        android:focusable="false"
+                        android:clickable="false"
+                        android:scaleType="centerCrop"
+                        android:layout_marginStart="0dp" />
+                    <RelativeLayout
+                        android:id="@+id/Balckliner_container"
+                        android:layout_width="64dp"
+                        android:layout_height="104dp"
+                        android:orientation="vertical"
+                        android:layout_alignParentEnd="true"
+                        android:gravity="center_vertical"
+                        >
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="#000000"
+                            android:alpha=".4"
+                        />
+
+                        <TextView
+                            android:id="@+id/NumberPlaylist"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="24dp"
+                            android:gravity="center"
+                            android:textColor="@color/LightColor"
+                            android:textFontWeight="600"
+                            android:textSize="20dp"
+                            android:textStyle="normal" 
+                            android:lineHeight="24dp"
+                            android:layout_gravity="center"
+                            />
+                        <ImageView
+                            android:id="@+id/PlaylistIcon" 
+                            android:layout_height="20dp"
+                            android:layout_width="20dp"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="56dp"
+                            android:layout_marginStart="20dp"
+                            android:src="@drawable/pif_video_list"
+                            />
+                    </RelativeLayout>
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <LinearLayout
+                android:id="@+id/info_container"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="184dp"
+                android:layout_marginTop="0dp"
+                android:clickable="false"
+                android:orientation="vertical"
+                android:focusable="false">
+
+                <TextView
+                    android:id="@+id/Name"
+                    android:layout_width="144dp"
+                    android:layout_height="wrap_content"
+                    android:lines="2"
+                    android:layout_marginTop="0dp"
+                    android:textFontWeight="500"
+                    android:textSize="18dp"
+                    android:textStyle="normal"
+                    android:lineHeight="22dp"
+                    android:clickable="false"
+                    android:focusable="false"
+                    />
+
+                <TextView
+                    android:id="@+id/Description"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="none"
+                    android:lines="1"
+                    android:textColor="?attr/colorReact"
+                    android:textFontWeight="400"
+                    android:textSize="14dp"
+                    android:lineHeight="18dp"
+                    android:layout_marginTop="2dp"
+                    />
+
+                <TextView
+                    android:id="@+id/Views_Count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="none"
+                    android:lines="1"
+                    android:textColor="?attr/colorReact"
+                    android:textFontWeight="400"
+                    android:textSize="14dp"
+                    android:lineHeight="18dp"
+                    android:layout_marginTop="2dp"
+                    android:focusable="false"
+                    android:clickable="false" 
+                    />
+            </LinearLayout>
+
+	        <ImageView
+		        android:id="@+id/videoMenu"
+		        android:layout_width="36dp"
+		        android:layout_height="36dp"
+		        android:padding="10dp"
+		        android:layout_weight="1" 
+		        android:gravity="center"
+		        android:layout_gravity="top|end"
+                android:layout_alignParentEnd="true"
+		        android:layout_marginHorizontal="3dp"
+		        android:background="?android:attr/selectableItemBackgroundBorderless"
+		        android:tint="?attr/colorReact"
+		        android:src="@drawable/pif_more" />
+ 
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>

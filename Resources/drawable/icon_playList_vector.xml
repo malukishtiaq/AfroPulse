@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="512"
+    android:viewportHeight="512">
+
+	<group
+            android:translateY="512"
+            android:scaleX="0.100000"
+            android:scaleY="-0.100000">
+		<path
+            android:fillColor="#000000"
+            android:strokeWidth="1"
+            android:pathData="M358 4686 c-57 -20 -85 -42 -116 -88 l-27 -42 -3 -735 c-2 -512 0 -747 8 -774 14 -49 65 -106 115 -128 52 -24 140 -24 185 -1 19 10 238 180 485 378 354 284 454 369 468 398 39 83 31 176 -21 238 -15 17 -227 192 -472 388 -449 359 -481 381 -556 380 -16 -1 -46 -7 -66 -14z" />
+		<path
+            android:fillColor="#000000"
+            android:strokeWidth="1"
+            android:pathData="M2055 4684 c-84 -31 -135 -108 -135 -204 0 -102 60 -184 154 -209 30 -9 398 -11 1361 -9 l1320 3 45 25 c24 14 58 45 75 68 27 40 30 51 30 122 0 71 -3 82 -30 122 -17 23 -51 54 -75 68 l-45 25 -1330 2 c-1145 1 -1336 0 -1370 -13z" />
+		<path
+            android:fillColor="#000000"
+            android:strokeWidth="1"
+            android:pathData="M2055 3404 c-84 -31 -135 -108 -135 -204 0 -102 60 -184 154 -209 30 -9 398 -11 1361 -9 l1320 3 45 25 c24 14 58 45 75 68 27 40 30 51 30 122 0 71 -3 82 -30 122 -17 23 -51 54 -75 68 l-45 25 -1330 2 c-1145 1 -1336 0 -1370 -13z" />
+		<path
+            android:fillColor="#000000"
+            android:strokeWidth="1"
+            android:pathData="M358 2126 c-57 -20 -85 -42 -116 -88 -24 -36 -27 -51 -27 -119 0 -70 3 -81 30 -121 17 -23 51 -54 75 -68 l45 -25 2195 0 2195 0 45 25 c24 14 58 45 75 68 27 40 30 51 30 122 0 71 -3 82 -30 122 -17 23 -51 54 -75 68 l-45 25 -2180 2 c-1801 2 -2187 0 -2217 -11z" />
+		<path
+            android:fillColor="#000000"
+            android:strokeWidth="1"
+            android:pathData="M358 846 c-57 -20 -85 -42 -116 -88 -24 -36 -27 -51 -27 -119 0 -70 3 -81 30 -121 17 -23 51 -54 75 -68 l45 -25 2195 0 2195 0 45 25 c24 14 58 45 75 68 27 40 30 51 30 122 0 71 -3 82 -30 122 -17 23 -51 54 -75 68 l-45 25 -2180 2 c-1801 2 -2187 0 -2217 -11z" />
+	</group>
+</vector>

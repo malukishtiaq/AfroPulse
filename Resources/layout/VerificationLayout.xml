@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:background="?attr/colorFill"
+	android:orientation="vertical">
+
+	<androidx.appcompat.widget.Toolbar
+		android:id="@+id/toolbar"
+		android:layout_width="match_parent"
+		android:layout_height="48dp"
+		app:theme="@style/ToolbarTheme"
+		android:layout_gravity="top"
+		app:layout_collapseMode="pin"
+		app:titleTextAppearance="@style/Toolbar.TitleText"
+		android:background="?attr/colorFill"
+		android:elevation="0dp"   />
+
+
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginStart="12dp"
+		android:layout_marginEnd="12dp"
+		android:gravity="start"
+		android:orientation="vertical"
+        >
+
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/Lbl_Verification"
+			android:textFontWeight="600"
+			android:textSize="32dp"
+			android:lineHeight="24dp"
+			android:textStyle="normal"
+			android:gravity="start"
+            />
+
+		<TextView
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:textFontWeight="400"
+			android:textSize="16dp"
+			android:lineHeight="24dp"
+			android:id="@+id/textTitileVerified"
+			android:text="@string/Lbl_Please_select_Image_passport"
+            />
+
+	</LinearLayout>
+
+	<androidx.core.widget.NestedScrollView
+		android:id="@+id/ScrollView"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:fillViewport="true"
+		android:visibility="visible"
+		android:background="?attr/colorFill"
+		app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="vertical">
+
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:layout_gravity="center"
+				android:layout_marginTop="24dp"
+				android:id="@+id/notVerified"
+				android:background="?attr/colorFill"
+				android:gravity="center_horizontal"
+				android:orientation="vertical"
+                >
+
+				<FrameLayout
+					android:layout_width="match_parent"
+					android:layout_height="160dp"
+					android:orientation="horizontal"
+					android:background="#F4F4F4"
+                    >
+					
+					<ImageView
+						android:id="@+id/Image"
+						android:scaleType="centerCrop"
+						android:layout_width="match_parent"
+						android:layout_height="160dp"
+						android:focusable="false"
+						android:clickable="false"
+					/>
+
+					<LinearLayout
+						android:layout_width="match_parent"
+						android:layout_height="145dp"
+						android:orientation="vertical"
+						android:gravity="center|top">
+
+						<ImageView
+							android:scaleType="centerCrop"
+							android:layout_width="32dp"
+							android:layout_height="32dp"
+							android:layout_marginTop="28dp"
+							android:focusable="false"
+							android:clickable="false"
+							android:gravity="center"
+							android:src="@drawable/pif_camera_two"
+							android:tint="@color/accent"
+                            />
+
+						<TextView
+							android:layout_width="match_parent"
+							android:layout_height="wrap_content"
+							android:text="@string/Lbl_Please_select_Image"
+							android:textFontWeight="400"
+							android:textSize="14dp"
+							android:lineHeight="18dp"
+							android:gravity="center"
+                            />
+
+						<androidx.appcompat.widget.AppCompatButton
+							android:layout_width="166dp"
+							android:layout_height="36dp"
+							android:id="@+id/btn_AddPhoto"
+							android:layout_marginTop="18dp"
+							android:textFontWeight="500"
+							android:textSize="16dp"
+							android:lineHeight="20dp"
+							android:paddingTop="8dp"
+							android:paddingEnd="24dp"
+							android:paddingBottom="8dp"
+							android:paddingStart="8dp"
+							android:layout_centerHorizontal="true"
+							android:background="@drawable/round_button_outline"
+							android:tag="false"
+							android:textAlignment="center"
+							android:textAllCaps="false"
+							android:text="@string/Lbl_SelectPictures"
+							android:textColor="@color/accent"
+                            />
+
+					</LinearLayout>
+
+				</FrameLayout>
+
+
+				<LinearLayout
+					android:layout_height="wrap_content"
+					android:layout_width="match_parent"
+					android:orientation="vertical">
+
+					<com.google.android.material.textfield.TextInputLayout
+						style="@style/PifInputStyle"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:layout_marginTop="38dp"
+						android:layout_marginStart="12dp"
+						android:layout_marginEnd="12dp"
+						app:boxStrokeWidth="1dp"
+						app:boxCornerRadiusTopStart="40dp"
+						app:boxCornerRadiusTopEnd="40dp"
+						app:boxCornerRadiusBottomStart="40dp"
+						app:boxCornerRadiusBottomEnd="40dp"
+						app:hintTextAppearance="@style/PifInputStyleHint"
+                        >
+						<com.google.android.material.textfield.TextInputEditText
+							android:layout_width="match_parent"
+							android:layout_height="60dp"
+							android:id="@+id/FirstName_text"
+							android:ems="10"
+							android:hint="@string/Lbl_FirstName"
+							android:lineHeight="20dp"
+							android:singleLine="true"
+							android:paddingStart="32dp"
+							android:textFontWeight="500"
+							android:textSize="18dp" />
+					</com.google.android.material.textfield.TextInputLayout>
+
+					<com.google.android.material.textfield.TextInputLayout
+						style="@style/PifInputStyle"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:layout_marginTop="16dp"
+						android:layout_marginStart="12dp"
+						android:layout_marginEnd="12dp"
+						app:boxStrokeWidth="1dp"
+						app:boxCornerRadiusTopStart="40dp"
+						app:boxCornerRadiusTopEnd="40dp"
+						app:boxCornerRadiusBottomStart="40dp"
+						app:boxCornerRadiusBottomEnd="40dp"
+						app:hintTextAppearance="@style/PifInputStyleHint"
+                        >
+						<com.google.android.material.textfield.TextInputEditText
+							android:layout_width="match_parent"
+							android:layout_height="60dp"
+							android:id="@+id/LastName_text"
+							android:ems="10"
+							android:hint="@string/Lbl_LastName"
+							android:singleLine="true"
+							android:lineHeight="20dp"
+							android:paddingStart="32dp"
+							android:textFontWeight="500"
+							android:textSize="18dp" />
+					</com.google.android.material.textfield.TextInputLayout>
+
+					<com.google.android.material.textfield.TextInputLayout
+						style="@style/PifInputStyle"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:layout_marginTop="16dp"
+						android:layout_marginStart="12dp"
+						android:layout_marginEnd="12dp"
+						app:boxStrokeWidth="1dp"
+						app:boxCornerRadiusTopStart="40dp"
+						app:boxCornerRadiusTopEnd="40dp"
+						app:boxCornerRadiusBottomStart="40dp"
+						app:boxCornerRadiusBottomEnd="40dp"
+						app:hintTextAppearance="@style/PifInputStyleHint"
+                        >
+						<com.google.android.material.textfield.TextInputEditText
+							android:layout_width="match_parent"
+							android:layout_height="90dp"
+							android:id="@+id/Messages_Edit"
+							android:ems="10"
+							android:gravity="start"
+							android:hint="@string/Lbl_Message"
+							android:singleLine="true"
+							android:lineHeight="20dp"
+							android:paddingStart="32dp"
+							android:textFontWeight="500"
+							android:textSize="18dp" />
+					</com.google.android.material.textfield.TextInputLayout>
+
+					<View
+						android:layout_width="match_parent"
+						android:layout_height="10dp" />
+
+					<androidx.appcompat.widget.AppCompatButton
+						android:background="@drawable/round_button_pressed"
+						android:layout_height="50dp"
+						android:layout_width="match_parent"
+						android:padding="14dp"
+						android:text="@string/Lbl_SubmitRequest"
+						android:textColor="@color/gnt_white"
+						android:textSize="15sp"
+						android:layout_gravity="bottom|center"
+						android:gravity="center"
+						android:clickable="true"
+						android:textAllCaps="false"
+						android:layout_marginStart="50dp"
+						android:layout_marginEnd="50dp"
+						android:id="@+id/submitButton"   />
+					
+				</LinearLayout>
+
+			</LinearLayout>
+
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:layout_gravity="center"
+				android:visibility="gone"
+				android:padding="30dp"
+				android:id="@+id/verified"
+				android:background="?attr/colorFill"
+				android:gravity="center_horizontal"
+				android:orientation="vertical">
+
+				<TextView
+					android:id="@+id/verifiedIcon"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginTop="5dp"
+					android:gravity="center"
+					android:textSize="100sp"
+					android:textColor="?attr/colorReact"
+					android:text="Ic"  />
+
+				<TextView
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginTop="25dp"
+					android:gravity="center"
+					android:textSize="15sp"
+					android:textColor="?attr/colorReact"
+					android:text="@string/Lbl_Congratulations_verified"  />
+
+			</LinearLayout>
+			  
+			<View
+				android:layout_width="match_parent"
+				android:layout_height="20dp" />
+
+		</LinearLayout>
+	</androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

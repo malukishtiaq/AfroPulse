@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"  xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+	<androidx.appcompat.widget.Toolbar
+		android:id="@+id/toolbar"
+		android:layout_width="match_parent"
+		android:layout_height="50dp"
+		android:layout_gravity="top"
+		android:elevation="0dp"
+		app:theme="@style/ToolbarTheme"
+		app:titleTextAppearance="@style/Toolbar.TitleText"
+		android:background="?attr/colorFill">
+
+    <TextView
+        android:id="@+id/toolbar_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textFontWeight="600"
+        android:textSize="18dp"
+        android:lineHeight="24dp"
+        android:text="@string/Lbl_Points"
+        />
+	</androidx.appcompat.widget.Toolbar>
+
+    <View
+		android:layout_width="match_parent"
+		android:layout_height="1dp"
+		android:background="?attr/colorDivider"
+		/>
+
+	<androidx.core.widget.NestedScrollView
+        android:id="@+id/nested_scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        android:scrollingCache="true"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="0dp"
+            app:cardBackgroundColor="?attr/colorSecondaryExtra"
+            >
+        
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    >
+
+                    <LinearLayout
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:padding="8dp"
+                        android:background="@drawable/shape_bg_bottom_navigation"
+                        android:backgroundTint="@color/accent"
+                        android:gravity="center"
+                        >
+
+	                    <ImageView
+		                    android:layout_width="24dp"
+		                    android:layout_height="24dp"
+		                    android:tint="@color/gnt_white"
+		                    android:src="@drawable/pif_comment_three"
+                            />
+                    </LinearLayout>
+
+                    <TextView
+	                    android:id="@+id/pointsComment"
+	                    android:layout_width="252dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:text="Earn 10 points by commenting any video"
+                        android:textFontWeight="400"
+                        android:textSize="18dp"
+                        android:lineHeight="24dp"
+                        android:layout_gravity="top"
+                        />
+                </LinearLayout>
+
+
+	            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginTop="24dp"
+                    >
+
+                    <LinearLayout
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:padding="8dp"
+                        android:background="@drawable/shape_bg_bottom_navigation"
+                        android:backgroundTint="@color/accent"
+                        android:gravity="center"
+                        >
+	                    <ImageView
+		                    android:layout_width="24dp"
+		                    android:layout_height="24dp"
+		                    android:tint="@color/gnt_white"
+		                    android:src="@drawable/pif_video_screen_like"
+                            />
+                    </LinearLayout>
+
+                    <TextView
+	                    android:id="@+id/pointsLike"
+	                    android:layout_width="252dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:text="Earn 5 points by Liking any video"
+                        android:textFontWeight="400"
+                        android:textSize="18dp"
+                        android:lineHeight="24dp"
+                        android:layout_gravity="top"
+                        />
+                </LinearLayout>
+
+
+                 <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginTop="24dp"
+                    >
+
+                    <LinearLayout
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:padding="8dp"
+                        android:background="@drawable/shape_bg_bottom_navigation"
+                        android:backgroundTint="@color/accent"
+                        android:gravity="center"
+                        >
+	                    <ImageView
+		                    android:layout_width="24dp"
+		                    android:layout_height="24dp"
+                            android:layout_marginTop="1dp"
+		                    android:tint="@color/gnt_white"
+		                    android:src="@drawable/pif_video_screen_dis_like"
+                            />
+                    </LinearLayout>
+
+                    <TextView
+	                    android:id="@+id/pointsDislike"
+	                    android:layout_width="252dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:text="Earn 2 points by Disliking any video"
+                        android:textFontWeight="400"
+                        android:textSize="18dp"
+                        android:lineHeight="24dp"
+                        android:layout_gravity="top"
+                        />
+                </LinearLayout>
+
+                 <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginTop="24dp"
+                    >
+
+                    <LinearLayout
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:padding="8dp"
+                        android:background="@drawable/shape_bg_bottom_navigation"
+                        android:backgroundTint="@color/accent"
+                        android:gravity="center"
+                        >
+	                    <ImageView
+		                    android:layout_width="24dp"
+		                    android:layout_height="24dp"
+		                    android:tint="@color/LightColor"
+		                    android:src="@drawable/pif_plus_circale"
+                            />
+                    </LinearLayout>
+
+                    <TextView
+	                    android:id="@+id/pointsUpload"
+	                    android:layout_width="252dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:text="Earn 20 points by Uploading any video"
+                        android:textFontWeight="400"
+                        android:textSize="18dp"
+                        android:lineHeight="24dp"
+                        android:layout_gravity="top"
+                        />
+                </LinearLayout>
+
+                 <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginTop="24dp"
+                    >
+
+                    <LinearLayout
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:padding="8dp"
+                        android:background="@drawable/shape_bg_bottom_navigation"
+                        android:backgroundTint="@color/accent"
+                        android:gravity="center"
+                        >
+	                    <ImageView
+		                    android:layout_width="24dp"
+		                    android:layout_height="24dp"
+		                    android:tint="@color/LightColor"
+		                    android:src="@drawable/pif_video_view_count"
+                            />
+                    </LinearLayout>
+
+                    <TextView
+	                    android:id="@+id/pointsWatching"
+	                    android:layout_width="252dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:text="Earn 2 points by Watching any video"
+                        android:textFontWeight="400"
+                        android:textSize="18dp"
+                        android:lineHeight="24dp"
+                        android:layout_gravity="top"
+                        />
+                </LinearLayout>
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+        
+
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>
+
+

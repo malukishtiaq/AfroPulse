@@ -1,0 +1,356 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/MotherLiner"
+    android:background="?attr/colorFill">
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/ScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="132dp">
+            
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginStart="12dp"
+                    android:textFontWeight="600"
+                    android:textSize="20dp"
+                    android:lineHeight="24dp"
+                    android:text="@string/Lbl_Description"
+                    />
+
+                <PlayTube.Library.Anjo.SuperTextLibrary.SuperTextView
+	                android:id="@+id/AboutText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="48dp"
+                    android:layout_marginStart="12dp"
+                    android:textFontWeight="400"
+                    android:textSize="16dp"
+                    android:lineHeight="24dp"
+                    />
+            
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_height="128dp"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_marginTop="0dp">
+
+                <TextView
+	                android:id="@+id/LblMoreInfo"
+	                android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginStart="12dp"
+                    android:textFontWeight="600"
+                    android:textSize="20dp"
+                    android:lineHeight="24dp"
+                    android:text="@string/Lbl_MoreInfo"
+                    />
+                 
+                <RelativeLayout
+	                android:id="@+id/genderLayout"
+	                android:layout_below="@+id/LblMoreInfo"
+	                android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginStart="12dp"
+                    android:gravity="center_vertical"
+                    >
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:background="@drawable/pif_male"
+                        android:tint="?attr/colorReact"
+                        />
+
+                    <TextView
+                        android:id="@+id/genderText"
+                        android:text="@string/Lbl_Gender"
+                        android:layout_width="wrap_content"
+                        android:layout_height="24dp"
+                        android:layout_marginStart="32dp"
+                        android:textFontWeight="400"
+                        android:textSize="16dp"
+                        android:lineHeight="24dp"
+                        android:drawableTint="?attr/colorReact"
+                        android:gravity="center"
+                        />
+                </RelativeLayout>
+
+                 <RelativeLayout
+	                android:id="@+id/emailLayout"
+	                android:layout_below="@+id/genderLayout"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginStart="12dp"
+                    >
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:background="@drawable/pif_mail"
+                        android:tint="?attr/colorReact"
+                        />
+                    <TextView
+                        android:id="@+id/emailText"
+                        android:text="@string/Lbl_Email"
+                        android:layout_width="wrap_content"
+                        android:layout_height="24dp"
+                        android:layout_marginStart="32dp"
+                        android:textFontWeight="400"
+                        android:textSize="16dp"
+                        android:lineHeight="24dp"
+                        android:drawableTint="?attr/colorReact"
+                        android:gravity="center"
+                        />
+
+                </RelativeLayout>
+            </RelativeLayout>
+           
+            <RelativeLayout
+                android:id="@+id/Social_Links_Linear"
+                android:layout_height="168dp"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_marginTop="0dp">
+
+                <TextView
+                    android:id="@+id/LblSocial_Links"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginStart="12dp"
+                    android:textFontWeight="600"
+                    android:textSize="20dp"
+                    android:lineHeight="24dp"
+                    android:text="@string/Lbl_Social_Links"
+                    />
+
+                <RelativeLayout
+	                android:id="@+id/facebookLayout"
+	                android:layout_below="@+id/LblSocial_Links"
+	                android:layout_width="match_parent"
+                    android:layout_height="24dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginStart="12dp"
+                    >
+
+                    <ImageView
+                        
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/pif_facebook"
+                        android:layout_weight="0"
+                        android:layout_gravity="center" />
+                
+                    <TextView
+                        android:id="@+id/facebookText"
+                        android:text="@string/Lbl_facebook"
+                        android:layout_width="wrap_content"
+                        android:layout_height="24dp"
+                        android:layout_marginStart="32dp"
+                        android:textFontWeight="400"
+                        android:textSize="16dp"
+                        android:lineHeight="24dp"
+                        android:drawableTint="?attr/colorReact"
+                        android:gravity="center"
+                        android:textColor="@color/accent"
+                        />
+                </RelativeLayout>
+
+                <RelativeLayout
+	                android:id="@+id/instagramLayout"
+	                android:layout_below="@+id/facebookLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="24dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginStart="12dp"
+                    >
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/pif_instagram"
+                        android:layout_weight="0"
+                        android:layout_gravity="center" />
+                
+                    <TextView
+	                    android:id="@+id/instagramText"
+                        android:text="@string/Lbl_Instagram"
+                        android:layout_width="wrap_content"
+                        android:layout_height="24dp"
+                        android:layout_marginStart="32dp"
+                        android:textFontWeight="400"
+                        android:textSize="16dp"
+                        android:lineHeight="24dp"
+                        android:drawableTint="?attr/colorReact"
+                        android:gravity="center"
+                        android:textColor="@color/accent"
+                        />
+                </RelativeLayout>
+
+                <RelativeLayout
+	                android:id="@+id/twitterLayout"
+	                android:layout_below="@+id/instagramLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="24dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginStart="12dp"
+                    >
+
+                    <ImageView
+                        
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/pif_twitter"
+                        android:layout_weight="0"
+                        android:layout_gravity="center" />
+                
+                    <TextView
+                        android:id="@+id/twitterText"
+                        android:text="@string/Lbl_Twitter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="24dp"
+                        android:layout_marginStart="32dp"
+                        android:textFontWeight="400"
+                        android:textSize="16dp"
+                        android:lineHeight="24dp"
+                        android:drawableTint="?attr/colorReact"
+                        android:gravity="center"
+                        android:textColor="@color/accent"
+                        />
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/BlockLiner"
+                android:layout_height="48dp"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_marginTop="0dp">
+
+                <View
+                    android:layout_marginTop="0dp"
+                    android:background="?attr/colorReact"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="24dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginStart="12dp"
+                    >
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/pif_block"
+                        android:layout_weight="0"
+                        android:layout_gravity="center" />
+                
+                    <TextView
+                        android:id="@+id/BlockText"
+                        android:text="@string/Lbl_Block"
+                        android:layout_width="wrap_content"
+                        android:layout_height="24dp"
+                        android:layout_marginStart="32dp"
+                        android:textFontWeight="400"
+                        android:textSize="16dp"
+                        android:lineHeight="24dp"
+                        android:drawableTint="?attr/colorReact"
+                        android:gravity="center"
+                        android:textColor="@color/accent"
+                        />
+                </RelativeLayout>
+
+            </RelativeLayout>
+            
+            <LinearLayout
+                android:id="@+id/MonetizationLayout1"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:clickable="true"
+                android:focusable="false"
+                android:focusableInTouchMode="true"
+                android:layout_marginTop="6dp"
+                android:visibility="gone"
+                android:background="?attr/colorSecondaryExtra">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:textSize="15dp"
+                    android:textStyle="bold"
+                    android:text="@string/Lbl_Monetization"
+                    android:clickable="true"
+                    android:focusable="false"
+                    android:focusableInTouchMode="true"
+                    android:layout_gravity="center"
+                    android:paddingStart="18dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/MonetizationLayout2"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:paddingBottom="10dp"
+                android:visibility="gone"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/MonetizationIcon"
+                    android:text="I"
+                    android:layout_height="wrap_content"
+                    android:textColor="?attr/colorReact"
+                    android:textSize="20dp"
+                    android:layout_width="50dp"
+                    android:layout_gravity="start"
+                    android:padding="15dp"
+                    android:layout_marginStart="5dp" />
+                <TextView
+                    android:id="@+id/MonetizationText"
+                    android:text="@string/Lbl_Monetization"
+                    android:layout_height="wrap_content"
+                    android:textColor="?attr/colorReact"
+                    android:textSize="15dp"
+                    android:layout_width="wrap_content"
+                    android:padding="15dp"
+                    android:layout_gravity="start" />
+            </LinearLayout>
+            
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <com.google.android.gms.ads.AdView
+                    android:id="@+id/adView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp"
+                    app:adSize="SMART_BANNER"
+                    app:adUnitId="@string/banner_ad_unit_id"
+                    android:layout_gravity="center"
+                    android:layout_alignParentBottom="true" />
+            </RelativeLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

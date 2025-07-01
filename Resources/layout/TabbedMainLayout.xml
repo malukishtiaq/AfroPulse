@@ -1,0 +1,140 @@
+<RelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:orientation="vertical"
+	android:id="@+id/MainContainerView"
+	android:animateLayoutChanges="true"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent">
+	<com.sothree.slidinguppanel.SlidingUpPanelLayout
+		android:id="@+id/sliding_layout"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:gravity="bottom"
+		app:umanoPanelHeight="0dp"
+		app:umanoShadowHeight="4dp"
+		app:umanoParallaxOffset="180dp"
+		app:umanoDragView="@+id/Mainroot"
+		app:umanoOverlay="true">
+
+		<FrameLayout
+			android:id="@+id/mainFragmentHolder"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:layout_alignParentTop="true"
+			android:layout_marginBottom="0dp"
+			android:orientation="vertical"
+			android:focusable="false"
+			android:fitsSystemWindows="true" />
+
+		<include
+			android:id="@+id/slidepanelchildtwo_topviewtwo"
+			layout="@layout/VideoSliderLayout"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent" />
+
+	</com.sothree.slidinguppanel.SlidingUpPanelLayout>
+
+	<androidx.cardview.widget.CardView
+		android:id="@+id/VideoButtomStyle"
+		android:layout_above="@+id/buttomnavigationBar"
+		android:layout_width="match_parent"
+		android:layout_height="110dp"
+		app:cardElevation="0.3dp"
+		app:cardCornerRadius="11dp"
+		android:visibility="gone"
+		android:clickable="true"
+		android:focusable="true">
+
+		<LinearLayout
+			android:background="?attr/colorFill"
+			android:orientation="horizontal"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:weightSum="10"
+			android:layout_gravity="center_vertical">
+
+			<PlayTube.Helpers.Views.CustomTouchLayout
+				android:id="@+id/Vcontainer"
+				android:layout_width="160dp"
+				android:layout_height="match_parent"
+				android:focusableInTouchMode="false"
+				android:clickable="false"
+				android:background="#000"
+				android:focusable="false"/>
+
+			<LinearLayout
+				android:id="@+id/videoTextcontainer"
+				android:layout_width="wrap_content"
+				android:layout_height="match_parent"
+				android:layout_weight="10"
+				android:orientation="vertical"
+				android:gravity="center_vertical"
+				android:layout_marginStart="5dp"
+				android:layout_gravity="center_vertical">
+
+				<TextView
+					android:id="@+id/videoTitileText"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:textFontWeight="500"
+					android:textSize="16dp"
+					android:lineHeight="20dp"
+					android:textStyle="normal"
+					android:maxLines="3"
+					android:ellipsize="end"/>
+
+				<TextView
+					android:id="@+id/videoChannelText"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:textColor="?attr/colorReact"
+					android:layout_marginTop="5dp"
+					android:textFontWeight="400"
+					android:textSize="14dp"
+					android:lineHeight="18dp"
+					android:drawablePadding="5dp"/>
+
+			</LinearLayout>
+
+			<LinearLayout
+				android:id="@+id/iconPlayerLayout"
+				android:layout_width="wrap_content"
+				android:layout_height="match_parent"
+				android:layout_weight="1"
+				android:gravity="end" 
+				android:orientation="horizontal">
+
+				<ImageView
+					android:id="@+id/iconPlayPlayer"
+					android:layout_width="24dp"
+					android:layout_height="24dp"
+					android:layout_gravity="center_vertical"
+					android:layout_marginEnd="8dp"
+					android:src="@drawable/exo_icon_pause"
+					android:tint="#00020F"/>
+
+				<ImageView
+					android:id="@+id/iconClosePlayer"
+					android:layout_width="24dp"
+					android:layout_height="24dp"
+					android:layout_gravity="center_vertical"
+					android:layout_marginEnd="8dp"
+					android:src="@drawable/pif_close_x"
+					android:tint="#00020F"/>
+			</LinearLayout>
+		</LinearLayout>
+
+	</androidx.cardview.widget.CardView>
+
+	<include
+		android:layout_below="@+id/Vcontainer"
+		android:id="@+id/buttomnavigationBar"
+		android:layout_alignParentBottom="true"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_gravity="bottom"
+		layout="@layout/custom_navigationbar" />
+
+</RelativeLayout>

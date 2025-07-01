@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:background="@drawable/EditTextStyleOne"
+              android:orientation="horizontal"
+              android:id="@+id/mainAlert"
+              android:padding="5dp"
+              android:focusable="true"
+              android:clickable="true"
+              android:layout_margin="10dp"
+              android:foreground="?attr/selectableItemBackground"
+              android:layout_width="match_parent"
+              android:layout_height="70dp">
+    
+    <ImageView
+	    android:id="@+id/HeadImage"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+		android:layout_gravity="center"
+        android:layout_margin="10dp" /> 
+
+    <LinearLayout 
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_gravity="center"
+	    android:layout_marginEnd="10dp"
+	    android:layout_marginTop="8dp"
+	    android:orientation="vertical">
+	    <TextView
+		    android:id="@+id/HeadText"
+		    android:layout_toEndOf="@+id/lineview"
+		    android:layout_toStartOf="@+id/Image"
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:textSize="16dp"
+		    android:text="@string/Lbl_Enjoy_your_favorite_videos"
+		    android:focusable="false"
+		    android:textStyle="bold"
+		    android:ellipsize="end"
+		    android:lines="1"
+		    android:maxLines="1"
+		    android:clickable="false"
+		    android:textAlignment="textStart" />
+	    <TextView
+		    android:id="@+id/subText"
+		    android:layout_toEndOf="@+id/lineview"
+		    android:layout_toStartOf="@+id/Image"
+		    android:layout_below="@+id/HeadText"
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:text="@string/Lbl_Start_signin"
+		    android:textSize="13dp"
+		    android:layout_marginTop="3dp"
+		    android:focusable="false"
+		    android:lines="2"
+		    android:clickable="false"
+		    android:textAlignment="textStart" />  
+    </LinearLayout>
+	  
+</LinearLayout>

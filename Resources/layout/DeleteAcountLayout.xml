@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:orientation="vertical"
+	android:background="?attr/colorFill"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+    >
+
+	<androidx.appcompat.widget.Toolbar
+		android:id="@+id/toolbar"
+		app:theme="@style/ToolbarTheme"
+		android:layout_width="match_parent"
+		android:layout_height="50dp"
+		app:titleTextAppearance="@style/Toolbar.TitleText"
+		android:background="?attr/colorFill">
+
+		<TextView
+			android:id="@+id/toolbar_title"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_gravity="center"
+			android:textFontWeight="600"
+			android:textSize="18dp"
+			android:lineHeight="24dp"
+			android:text="@string/Lbl_DeleteAccount"
+            />
+
+	</androidx.appcompat.widget.Toolbar>
+
+	<View
+		android:layout_width="match_parent"
+		android:layout_height="1dp"
+		android:background="?attr/colorDivider"
+        />
+
+
+
+	<RelativeLayout
+		android:id="@+id/lyt_form"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:orientation="vertical"
+        >
+
+		<!--Password Section -->
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="vertical"
+            >
+
+			<com.google.android.material.textfield.TextInputLayout
+				style="@style/PifInputStyle"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="16dp"
+				android:layout_marginStart="12dp"
+				android:layout_marginEnd="12dp"
+				app:boxStrokeWidth="1dp"
+				app:boxCornerRadiusTopStart="40dp"
+				app:boxCornerRadiusTopEnd="40dp"
+				app:boxCornerRadiusBottomStart="40dp"
+				app:boxCornerRadiusBottomEnd="40dp"
+				app:startIconDrawable="@drawable/pif_edit_user"
+				app:startIconTint="#737884"
+				app:endIconMode="custom"
+				app:hintTextAppearance="@style/PifInputStyleHint"
+                >
+
+				<com.google.android.material.textfield.TextInputEditText
+					android:layout_width="match_parent"
+					android:layout_height="60dp"
+					android:id="@+id/PasswordEditText"
+					android:ems="10"
+					android:hint="@string/Lbl_Password"
+					android:lineHeight="20dp"
+					android:paddingStart="32dp"
+					android:text=""
+					android:inputType="textPassword"
+					android:singleLine="true"
+					android:textFontWeight="500"
+					android:textSize="18dp" />
+			</com.google.android.material.textfield.TextInputLayout>
+
+			<CheckBox
+				android:id="@+id/DeleteCheckBox"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_margin="20dp"
+				android:padding="10dp"
+				android:theme="@style/PifChckBox"
+				android:buttonTintMode="multiply"
+				android:button="@drawable/pif_check_box_one"
+				android:text="@string/Lbl_IWantToDelete1"
+				android:textColor="?attr/colorReact"
+				android:textFontWeight="400"
+				android:textSize="16dp"
+				android:lineHeight="24dp"
+			/>
+			<PlayTube.Helpers.Ads.TemplateView
+				android:id="@+id/my_template"
+				android:padding="8dp"
+				android:visibility="gone"
+				android:layout_marginTop="15dp"
+				app:gnt_template_type="@layout/gnt_medium_template_view"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_gravity="bottom"
+				android:layout_alignParentBottom="true"
+				android:layout_centerHorizontal="true" />
+
+		</LinearLayout>
+
+
+		<androidx.appcompat.widget.AppCompatButton
+			android:id="@+id/DeleteButton"
+			android:background="@drawable/pif_btn_round_two"
+			android:layout_width="match_parent"
+			android:layout_height="48dp"
+			android:text="@string/Lbl_DeleteAccount"
+			android:textAllCaps="false"
+			android:textFontWeight="500"
+			android:textSize="18dp"
+			android:lineHeight="28dp"
+			android:textColor="@color/LightColor"
+			android:clickable="true"
+			android:paddingTop="10dp"
+			android:paddingEnd="16dp"
+			android:paddingBottom="10dp"
+			android:paddingStart="10dp"
+			android:layout_marginStart="12dp"
+			android:layout_marginEnd="12dp"
+			android:layout_marginBottom="16dp"
+			android:layout_alignParentBottom="true"
+            />
+	</RelativeLayout>
+</LinearLayout>  

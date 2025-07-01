@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:background="?attr/colorFill"
+	android:orientation="vertical"
+	android:paddingBottom="0dp">
+
+	<androidx.appcompat.widget.Toolbar
+		android:id="@+id/toolbar"
+		android:layout_width="match_parent"
+		android:layout_height="50dp"
+		app:theme="@style/ToolbarTheme"
+		android:layout_gravity="top"
+		app:layout_collapseMode="pin"
+		app:titleTextAppearance="@style/Toolbar.TitleText"
+		android:background="?attr/colorFill"
+		android:elevation="0dp">
+
+		<LinearLayout
+			android:layout_marginTop="5dp"
+			android:weightSum="10"
+			android:layout_width="match_parent"
+			android:background="@drawable/new_login_status"
+			android:orientation="horizontal"
+			android:layout_marginEnd="5dp"
+			android:layout_height="40dp">
+
+			<AutoCompleteTextView
+				android:id="@+id/searchBox"
+				android:layout_width="wrap_content"
+				android:layout_height="40dp"
+				android:layout_weight="10"
+				android:hint="@string/Lbl_Search"
+				android:textColorHint="#A1A6B2"
+				android:textFontWeight="400"
+				android:textSize="18dp"
+				android:lineHeight="24dp"
+				android:gravity="start|center"
+				android:layout_gravity="start|center"
+				android:background="@null"
+				android:paddingStart="17dp"
+				android:drawableTint="#7C858E"
+				android:singleLine="true"
+				android:imeOptions="actionSearch" />
+
+			<TextView
+				android:id="@+id/IconFilter"
+				android:layout_width="30dp"
+				android:layout_height="match_parent"
+				android:layout_weight="1"
+				android:background="?attr/selectableItemBackgroundBorderless"
+				android:text="#"
+				android:textColor="#7C858E"
+				android:gravity="center"
+				android:layout_gravity="center"
+				android:layout_marginEnd="5dp"
+				android:layout_marginStart="3dp"
+				android:layout_marginTop="1dp"
+				android:textSize="18dp" />
+
+			<TextView
+				android:id="@+id/IconClose"
+				android:layout_width="30dp"
+				android:layout_height="match_parent"
+				android:layout_weight="1"
+				android:background="?attr/selectableItemBackgroundBorderless"
+				android:text="#"
+				android:textColor="#7C858E"
+				android:gravity="center"
+				android:layout_gravity="center"
+				android:layout_marginEnd="5dp"
+				android:layout_marginStart="3dp"
+				android:layout_marginTop="1dp"
+				android:textSize="18dp" />
+		</LinearLayout>
+	</androidx.appcompat.widget.Toolbar>
+
+	<androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+		android:id="@+id/swipeRefreshLayout"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:layout_gravity="center_vertical">
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="vertical"
+			android:background="?attr/colorFill"> 
+
+			<LinearLayout
+				android:id="@+id/catLayout"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:layout_marginStart="12dp"
+				android:layout_marginEnd="12dp"
+				android:layout_gravity="center"
+				android:orientation="vertical">
+
+				<include
+					android:id="@+id/emptyLayout"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					layout="@layout/EmptyStateLayout" />
+
+				<com.google.android.flexbox.FlexboxLayout
+					android:id="@+id/catFlexboxLayout"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginTop="8dp"
+					android:layout_gravity="center"
+					android:gravity="center"
+					app:flexWrap="wrap"
+					app:alignItems="stretch"
+					app:alignContent="stretch" >
+				</com.google.android.flexbox.FlexboxLayout>
+
+			</LinearLayout>
+
+			<androidx.recyclerview.widget.RecyclerView
+				android:id="@+id/recyler"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:scrollbars="vertical"
+				android:layout_marginTop="0dp"
+				android:layout_marginBottom="70dp"/>
+
+		</LinearLayout>
+	</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+</LinearLayout>

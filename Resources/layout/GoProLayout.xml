@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="?attr/colorFill"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+		    android:layout_height="48dp"
+		    android:layout_marginTop="10dp"
+		    app:theme="@style/ToolbarTheme"
+		    android:layout_gravity="top"
+		    app:layout_collapseMode="pin"
+		    app:titleTextAppearance="@style/Toolbar.TitleText"
+		    android:background="?attr/colorFill"
+		    android:elevation="0dp">
+            >
+
+            <TextView
+                android:id="@+id/toolbar_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textFontWeight="600"
+                android:textSize="18dp"
+                android:lineHeight="24dp"
+                android:text="@string/Lbl_Go_Pro"
+                />
+
+        </androidx.appcompat.widget.Toolbar>
+
+	<View
+		android:layout_width="match_parent"
+		android:layout_height="1dp"
+		android:background="?attr/colorDivider"
+		/>
+
+    <androidx.core.widget.NestedScrollView
+        android:orientation="vertical"
+        android:fillViewport="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <TextView
+                android:id="@+id/headText" 
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/Lbl_HeadTextGoPro"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginEnd="12dp"
+                android:textFontWeight="600"
+                android:textSize="24dp"
+                android:lineHeight="32dp"
+                android:gravity="start"
+                android:layout_gravity="start" />
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginEnd="12dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="0dp"
+                app:cardBackgroundColor="#F4F4F4"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:weightSum="2"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:padding="16dp"
+                    >
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        >
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            >
+                    
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textFontWeight="600"
+                                android:textSize="16dp"
+                                android:lineHeight="24dp"
+                                android:textColor="@color/accent"
+                                android:text="@string/Lbl_Basic"
+                                />
+
+                            <TextView
+                                android:layout_width="83dp"
+                                android:layout_height="24dp"
+                                android:background="@drawable/pif_bg_round_three"
+                                android:textFontWeight="500"
+                                android:textSize="12dp"
+                                android:lineHeight="16dp"
+                                android:paddingStart="12dp"
+                                android:paddingTop="4dp"
+                                android:paddingEnd="12dp"
+                                android:paddingBottom="4dp"
+                                android:gravity="center"
+                                android:textColor="@color/accent"
+                                android:text="@string/Lbl_CurrentPlan"
+                                android:layout_alignParentEnd="true"
+                                />
+                        </RelativeLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textFontWeight="400"
+                            android:textSize="16dp"
+                            android:lineHeight="20dp"
+                            android:textColor="?attr/colorReact"
+                            android:text="@string/Lbl_FreeMember"
+                            />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="horizontal"
+                        android:gravity="end"
+                        >
+                
+                        <TextView
+	                        android:id="@+id/priceFreeMember"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="$0"
+                            android:textFontWeight="600"
+                            android:textSize="26dp"
+                            android:lineHeight="24dp"
+                            android:layout_gravity="center_vertical"
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" 
+                            android:textFontWeight="400"
+                            android:textSize="16dp"
+                            android:lineHeight="20dp"
+                            android:textColor="?attr/colorReact"
+                            android:layout_gravity="center_vertical"
+                            />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginEnd="12dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="0dp"
+                app:cardBackgroundColor="#F8AB17"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="16dp"
+                    android:orientation="vertical"
+                    >
+                
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:gravity="center_vertical"
+                        >
+                    
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:src="@drawable/pif_star_fill"
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/Lbl_ProMember"
+                            android:textFontWeight="600"
+                            android:textSize="26dp"
+                            android:lineHeight="24dp"
+                            android:layout_marginStart="56dp"
+                            android:layout_centerVertical="true"
+                            android:textColor="@color/LightColor"
+                            />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="horizontal"
+                            android:gravity="end"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            >
+                            <TextView
+	                            android:id="@+id/priceProMember"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="$0"
+                                android:textFontWeight="600"
+                                android:textSize="26dp"
+                                android:lineHeight="24dp"
+                                android:layout_gravity="center_vertical"
+                                android:textColor="@color/LightColor"
+                                />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" 
+                                android:textFontWeight="400"
+                                android:textSize="16dp"
+                                android:lineHeight="20dp"
+                                android:layout_gravity="center_vertical"
+                                android:textColor="@color/LightColor"
+                                />
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginTop="24dp"
+                        >
+                    
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/Lbl_ProMember_item1"
+                            android:textFontWeight="500"
+                            android:textSize="16dp"
+                            android:lineHeight="20dp"
+                            android:layout_marginStart="0dp"
+                            android:layout_centerVertical="true"
+                            android:textColor="@color/LightColor"
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/Lbl_ProMember_item2"
+                            android:layout_marginTop="12dp"
+                            android:textFontWeight="500"
+                            android:textSize="16dp"
+                            android:lineHeight="20dp"
+                            android:layout_marginStart="0dp"
+                            android:layout_centerVertical="true"
+                            android:textColor="@color/LightColor"
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/Lbl_ProMember_item3"
+                            android:layout_marginTop="12dp"
+                            android:textFontWeight="500"
+                            android:textSize="16dp"
+                            android:lineHeight="20dp"
+                            android:layout_marginStart="0dp"
+                            android:layout_centerVertical="true"
+                            android:textColor="@color/LightColor"
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/Lbl_ProMember_item4"
+                            android:layout_marginTop="12dp"
+                            android:textFontWeight="500"
+                            android:textSize="16dp"
+                            android:lineHeight="20dp"
+                            android:layout_marginStart="0dp"
+                            android:layout_centerVertical="true"
+                            android:textColor="@color/LightColor"
+                            />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/Lbl_ProMember_item5"
+                            android:layout_marginTop="12dp"
+                            android:textFontWeight="500"
+                            android:textSize="16dp"
+                            android:lineHeight="20dp"
+                            android:layout_marginStart="0dp"
+                            android:layout_centerVertical="true"
+                            android:textColor="@color/LightColor"
+                            />
+                    </LinearLayout>
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btn_upgrade"
+                        android:layout_width="match_parent"
+                        android:layout_height="44dp"
+                        android:layout_centerHorizontal="true"
+                        android:text="@string/Lbl_upgrade_now"
+                        android:background="@drawable/pif_btn_round_three"
+                        android:textStyle="normal"
+                        android:textFontWeight="600"
+                        android:textSize="16dp"
+                        android:lineHeight="20dp"
+                        android:layout_marginTop="24dp"
+                        android:paddingStart="12dp"
+                        android:paddingTop="8dp"
+                        android:paddingEnd="12dp"
+                        android:paddingBottom="8dp"
+                        android:backgroundTint="#FFFFFF"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:textColor="#F8AB17"
+                        android:textAllCaps="false"
+                        />
+
+                </LinearLayout>
+                
+            </androidx.cardview.widget.CardView>
+         
+            <View
+                android:layout_height="?android:attr/actionBarSize"
+                android:layout_width="match_parent" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/mainComment"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+    
+        <View
+            android:layout_width="match_parent"
+		    android:background="#EDEEF1"
+		    android:layout_marginTop="0dp"
+            android:layout_marginBottom="0dp"
+            android:layout_marginStart="0dp"
+            android:layout_height="2dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+        
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center|top"
+                android:layout_marginStart="10dp"
+                >
+
+                <ImageView
+                    android:id="@+id/card_pro_pic"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginTop="16dp"
+		            android:src="@drawable/no_profile_image_circle"
+                    app:civ_border_color="@color/gnt_white" />
+            </LinearLayout>
+            
+
+            <LinearLayout 
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="8dp"
+                android:layout_toEndOf="@+id/card_pro_pic" 
+                android:id="@+id/bubble_layout"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="12dp"
+                > 
+        
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    >
+        
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/username"
+                        android:textFontWeight="400"
+                        android:textSize="15dp"
+                        android:lineHeight="20dp"
+                        android:textColor="?attr/colorReact"
+                            />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=" · "
+                        android:textFontWeight="400"
+                        android:textSize="15dp"
+                        android:lineHeight="20dp"
+                        android:textColor="?attr/colorReact"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/time"
+                        android:textFontWeight="400"
+                        android:textSize="15dp"
+                        android:lineHeight="20dp"
+                        android:textColor="?attr/colorReact"
+                        />
+                </LinearLayout>
+
+                <PlayTube.Library.Anjo.SuperTextLibrary.SuperTextView
+                    android:id="@+id/active"
+                    android:textFontWeight="500"
+                    android:textSize="16dp"
+                    android:lineHeight="22dp"
+                    android:padding="3dp"
+                    
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textIsSelectable="false" /> 
+
+                <LinearLayout
+                    android:id="@+id/actionlayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="36dp"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="0dp"
+                        android:layout_gravity="start"
+                        android:gravity="center_vertical"
+                        >
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:id="@+id/LikeButton">
+
+                            <FrameLayout
+                                android:layout_width="16dp"
+                                android:layout_height="16dp">
+
+                                <ImageView
+                                    android:id="@+id/Likeicon"
+                                    android:layout_width="14.46dp"
+                                    android:layout_height="14.47dp"
+                                    android:src="@drawable/pif_video_screen_like"
+                                    android:tint="?attr/colorReact"
+                                    android:layout_gravity="center"
+                                    android:gravity="center" />
+                            </FrameLayout>
+
+                            <TextView
+                                android:id="@+id/LikeNumber"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textFontWeight="500"
+                                android:textSize="16dp"
+                                android:lineHeight="20dp"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:textColor="?attr/colorReact"
+                                android:layout_marginStart="8.88dp"
+                                />
+
+                        </LinearLayout>
+
+                        <FrameLayout
+                            android:id="@+id/UnLikeButton"
+                            android:layout_width="16dp"
+                            android:layout_height="16dp"
+                            android:layout_marginStart="16dp">
+                
+                            <ImageView
+                                android:id="@+id/UnLikeicon"
+                                android:layout_width="14.46dp"
+                                android:layout_height="14.67dp"
+                                android:src="@drawable/pif_video_screen_dis_like"
+                                android:tint="?attr/colorReact"
+                                android:layout_gravity="center"
+                                android:gravity="center" />
+                        </FrameLayout>
+
+                        <LinearLayout
+                                android:orientation="horizontal"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                >
+                                <TextView
+                                    android:id="@+id/UnLikeNumber"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="14sp"
+                                    android:layout_marginBottom="1dp"
+                                    android:layout_gravity="center"
+                                    android:gravity="center"
+                                    android:textColor="?attr/colorReact"
+                                    android:visibility="gone"
+                                    android:layout_marginStart="8dp"
+                                    android:layout_marginEnd="8dp" />
+                            </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="24dp"
+                        android:layout_marginTop="0dp"
+                        android:layout_marginBottom="8dp"
+                        android:gravity="center_vertical"
+                        >
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="0dp"
+                            android:id="@+id/ReplyButton">
+
+                            <ImageView
+                                android:id="@+id/ReplyIcon"
+                                android:layout_width="18dp"
+                                android:layout_height="18dp"
+                                android:src="@drawable/icon_reply_vector"
+                                android:tint="#777777"
+                                android:layout_gravity="center"
+                                android:visibility="gone"
+                                android:gravity="center" />
+
+                            <TextView
+                                android:id="@+id/RepliesCount"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textFontWeight="500"
+                                android:textSize="16dp"
+                                android:lineHeight="24dp"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:textColor="@color/accent"
+                                android:text="0"/> 
+                     
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout> 
+    
+    </LinearLayout>
+
+</RelativeLayout> 

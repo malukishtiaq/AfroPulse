@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:orientation="vertical"
+	android:background="?attr/colorFill"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent">
+	<androidx.appcompat.widget.Toolbar
+		android:id="@+id/toolbar"
+		android:layout_width="match_parent"
+		android:layout_height="48dp"
+		app:theme="@style/ToolbarTheme"
+		android:layout_gravity="top"
+		app:layout_collapseMode="pin"
+		app:titleTextAppearance="@style/Toolbar.TitleText"
+		android:background="?attr/colorFill"
+		android:elevation="0dp" >
+	
+		<TextView
+            android:id="@+id/toolbar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textFontWeight="600"
+            android:textSize="18dp"
+            android:lineHeight="24dp"
+            android:text="@string/Lbl_LinkWithTvCode"  />
+
+	</androidx.appcompat.widget.Toolbar>
+
+	<View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+		android:background="?attr/colorDivider"
+		/>
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="vertical"
+		android:gravity="center"
+		>
+
+		<ImageView
+			android:id="@+id/app_logo"
+			android:layout_width="148dp"
+			android:layout_height="75dp"
+			android:layout_marginTop="54dp"
+			android:src="@drawable/logo" 
+			/>
+		 
+		<TextView 
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_gravity="center"
+			android:gravity="center"
+			android:text="@string/Lbl_LinkWithTvCode"
+			android:layout_marginTop="50dp"
+			android:textFontWeight="600"
+			android:textSize="18dp"
+			android:lineHeight="24dp"
+			android:textStyle="normal"
+			/>
+		 
+		<TextView 
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_gravity="center"
+			android:layout_marginTop="4dp"
+			android:layout_marginStart="12dp"
+			android:layout_marginEnd="12dp"
+			android:gravity="center"
+			android:text="@string/Lbl_LinkWithTvCode_Des"
+			android:textColor="?attr/colorReact"
+			android:textFontWeight="400"
+			android:textSize="16dp"
+			android:lineHeight="24dp"
+			/>
+		  
+		<FrameLayout
+            android:layout_width="160dp"
+            android:layout_height="56dp"
+			android:background="@drawable/pif_bg_round_five"
+			android:layout_marginTop="16dp"
+			>
+
+			<TextView
+				android:id="@+id/codeNumber"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_gravity="center"
+				android:gravity="center"
+				android:textColor="@color/accent"				
+				android:textFontWeight="600"
+				android:textSize="32dp"
+				android:lineHeight="40dp"
+				android:textStyle="normal"
+				/>
+
+		</FrameLayout>
+		
+		<PlayTube.Helpers.Ads.TemplateView 
+			android:id="@+id/my_template"
+			android:padding="8dp"
+			app:gnt_template_type="@layout/gnt_medium_template_view"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="16dp"
+			android:layout_gravity="bottom"
+			android:visibility="gone"
+			android:layout_alignParentBottom="true"
+			android:layout_centerHorizontal="true" />
+
+	</LinearLayout> 
+</LinearLayout> 

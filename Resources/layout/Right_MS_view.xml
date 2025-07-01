@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+	android:orientation="vertical"
+    android:gravity="end"
+    android:layout_margin="0dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="4dp"
+    android:paddingEnd="3dp">
+	<LinearLayout
+        android:id="@+id/bubble_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+    
+        <TextView
+            android:id="@+id/time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp"
+            android:textColor="#A1A6B2"
+            android:textFontWeight="450"
+            android:textSize="14dp"
+            android:lineHeight="24dp"
+            android:textAlignment="center"
+            android:text="June 1 at 2:32 PM "
+        />
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="end"
+            android:gravity="end"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            >
+
+            <PlayTube.Library.Anjo.SuperTextLibrary.SuperTextView
+                android:id="@+id/active"
+                android:textColor="@color/LightColor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/chat_rounded_right_layout"
+                android:paddingTop="10dp"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:paddingBottom="10dp"
+                android:layout_marginEnd="10dp"
+				android:textIsSelectable="true"
+                android:textFontWeight="450"
+                android:textSize="14dp"
+                android:lineHeight="24dp"
+                android:text="Hey, how’s it going?"
+            />
+
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

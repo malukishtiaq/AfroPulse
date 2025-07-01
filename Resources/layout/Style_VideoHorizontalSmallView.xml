@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/cardview2"
+	android:layout_width="168dp"
+	android:layout_height="150dp"	
+	android:orientation="vertical"
+	android:paddingEnd="12dp"
+	>
+
+	<LinearLayout
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:orientation="vertical"
+		>
+
+		<FrameLayout
+			android:id="@+id/Image_container"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="vertical">
+
+			<ImageView
+				android:id="@+id/Imagevideo"
+				android:layout_width="156dp"
+				android:layout_height="88dp"
+				android:scaleType="centerCrop"
+				android:src="@drawable/ImagePlacholder" />
+
+			<TextView
+				android:id="@+id/videoType"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_alignParentTop="true"
+				android:textColor="@color/gnt_white"
+				android:textSize="12dp"
+				android:visibility="invisible"
+				android:textStyle="normal"
+				android:layout_marginStart="0dp"
+				android:layout_marginTop="0dp"
+				android:background="@drawable/ThirdpartyRoundText"
+				android:backgroundTint="#6441A4" />
+
+			<TextView
+				android:id="@+id/duration"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:textColor="@color/gnt_white"
+				android:paddingTop="1dp"
+				android:paddingEnd="6dp"
+				android:paddingBottom="1dp"
+				android:paddingStart="6dp"
+				android:text="00:00"
+				android:textFontWeight="500"
+				android:textSize="14dp"
+				android:lineHeight="20dp"
+				android:textStyle="normal"
+				android:layout_marginEnd="8dp"
+				android:layout_marginBottom="8dp"
+				android:background="@xml/rounded_corner"
+				android:layout_gravity="bottom|end" />
+		</FrameLayout>
+		 
+		<ProgressBar
+			android:id="@+id/Progress"
+			android:layout_width="match_parent"
+			android:layout_height="5dp"
+			style="?android:attr/progressBarStyleHorizontal"
+			android:visibility="gone" />
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="horizontal"
+			android:weightSum="10"
+			android:layout_marginTop="8dp"
+			android:layout_gravity="center_vertical"
+			android:gravity="center_vertical">
+
+			<LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+				android:layout_weight="10"
+				android:orientation="vertical"
+				>
+
+				<TextView
+					android:id="@+id/Title"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:textFontWeight="500"
+					android:textSize="16dp"
+					android:lineHeight="20dp"
+					android:gravity="start"
+					android:maxLines="2" 
+				/>
+
+				<TextView
+					android:id="@+id/ChannelName"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:textFontWeight="400"
+					android:textSize="14dp"
+					android:lineHeight="18dp"
+					android:textColor="?attr/colorReact"
+					android:gravity="start"
+					android:maxLines="2" 
+				/>
+
+
+			</LinearLayout>
+
+			<ImageView
+				android:id="@+id/videoMenu"
+				android:layout_width="30dp"
+				android:layout_height="30dp"
+				android:padding="7dp"
+				android:layout_weight="1"
+				android:gravity="center"
+				android:layout_gravity="top|end"
+				android:layout_marginHorizontal="3dp"
+				android:background="?android:attr/selectableItemBackgroundBorderless"
+				android:tint="?attr/colorReact"
+				android:src="@drawable/pif_more" />
+			 
+		</LinearLayout>
+		 
+	</LinearLayout>
+</LinearLayout> 

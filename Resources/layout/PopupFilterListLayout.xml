@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:layout_width="185dp"
+	android:layout_height="wrap_content"
+	app:cardBackgroundColor="?attr/colorFill"
+	app:cardCornerRadius="10dp"
+	app:cardElevation="3dp"
+	app:cardUseCompatPadding="true">
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:padding="10dp"
+		android:orientation="vertical">
+		<LinearLayout
+			android:id="@+id/menu_ascending"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="horizontal"
+			android:background="?attr/selectableItemBackground"
+			android:padding="10dp">
+
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="@string/Lbl_Ascending"
+				android:textSize="13sp" />
+
+			<View
+				android:layout_width="0dp"
+				android:layout_height="0dp"
+				android:layout_weight="1"/>
+
+			<ImageView
+				android:id="@+id/menu_check_ascending"
+				android:layout_width="20dp"
+				android:layout_height="20dp"
+				android:visibility="visible"
+				android:tint="@color/accent"
+				android:src="@drawable/ic_check_circle"/>
+
+		</LinearLayout>
+
+		<View
+			android:layout_width="match_parent"
+			android:layout_height="1dp"
+			android:background="?attr/colorDivider"
+			android:layout_marginHorizontal="10dp"/>
+
+		<LinearLayout
+			android:id="@+id/menu_descending"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="horizontal"
+			android:background="?attr/selectableItemBackground"
+			android:padding="10dp">
+			 
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="@string/Lbl_Descending"
+				android:textSize="13sp" />
+
+			<View
+				android:layout_width="0dp"
+				android:layout_height="0dp"
+				android:layout_weight="1"/>
+
+			<ImageView
+				android:id="@+id/menu_check_descending"
+				android:layout_width="20dp"
+				android:layout_height="20dp"
+				android:visibility="visible"
+				android:tint="@color/accent"
+				android:src="@drawable/ic_uncheck_circle"/>
+
+		</LinearLayout>
+
+		<View
+			android:layout_width="match_parent"
+			android:layout_height="1dp"
+			android:background="?attr/colorDivider"
+			android:layout_marginHorizontal="10dp"/>
+
+		<LinearLayout
+			android:id="@+id/menu_dataAdded"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="horizontal"
+			android:background="?attr/selectableItemBackground"
+			android:padding="10dp">
+
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="@string/Lbl_RecentlyAdded"
+				android:textSize="13sp" />
+
+			<View
+				android:layout_width="0dp"
+				android:layout_height="0dp"
+				android:layout_weight="1"/>
+
+			<ImageView
+				android:id="@+id/menu_check_dataAdded"
+				android:layout_width="20dp"
+				android:layout_height="20dp"
+				android:visibility="visible"
+				android:tint="@color/accent"
+				android:src="@drawable/ic_uncheck_circle"/>
+
+		</LinearLayout>
+
+	</LinearLayout>
+</androidx.cardview.widget.CardView>

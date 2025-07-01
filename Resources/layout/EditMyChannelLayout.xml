@@ -1,0 +1,489 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:clickable="true"
+	android:focusable="true"
+	android:id="@+id/MotherLinear"
+	android:background="?attr/colorFill"
+	android:orientation="vertical">
+
+	<androidx.appcompat.widget.Toolbar
+		android:id="@+id/toolbar"
+		android:layout_width="match_parent"
+		android:layout_height="48dp"
+		app:theme="@style/ToolbarTheme"
+		android:layout_gravity="top"
+		app:layout_collapseMode="pin"
+		app:titleTextAppearance="@style/Toolbar.TitleText"
+		android:background="?attr/colorFill"
+		android:elevation="0dp">
+
+		<TextView
+			android:id="@+id/toolbar_title"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_gravity="center"
+			android:textFontWeight="600"
+			android:textSize="18dp"
+			android:lineHeight="24dp"
+			android:text="@string/Lbl_edit_MyChannal"  />
+
+	</androidx.appcompat.widget.Toolbar>
+
+	<androidx.core.widget.NestedScrollView
+		android:id="@+id/ScrollView"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:fillViewport="true"
+		app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+		<LinearLayout
+			android:orientation="vertical"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content" >
+
+			<RelativeLayout
+				android:layout_width="match_parent"
+				android:layout_height="204dp"
+				android:orientation="vertical"
+				android:gravity="center" >
+
+				<ImageView
+					android:id="@+id/imageCover"
+					android:layout_width="match_parent"
+					android:layout_height="204dp" />
+
+				<LinearLayout
+					android:id="@+id/ChangeCoverLayout"
+					android:layout_width="127dp"
+					android:layout_height="32dp"
+					android:background="@drawable/pif_bg_round_two"
+					android:layout_alignParentEnd="true"
+					android:layout_marginTop="12dp"
+					android:layout_marginEnd="12dp"
+					android:gravity="center_vertical"
+					android:orientation="horizontal">
+
+					<ImageView
+						android:layout_width="20dp"
+						android:layout_height="20dp"
+						android:layout_marginStart="10dp"
+						android:scaleType="fitXY"
+						android:src="@drawable/pif_camera_two"/>
+
+					<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_marginStart="8dp"
+						android:textFontWeight="500"
+						android:textSize="14dp"
+						android:lineHeight="20dp"
+						android:text="@string/Lbl_Change_Cover"
+						android:textColor="@color/LightColor" />
+
+				</LinearLayout>
+
+				<RelativeLayout
+					android:id="@+id/ChangeAvatarLayout"
+					android:layout_width="100dp"
+					android:layout_height="100dp"
+					android:layout_centerHorizontal="true"
+					android:layout_centerVertical="true">
+
+					<ImageView
+						android:id="@+id/imageAvatar"
+						android:layout_width="100dp"
+						android:layout_height="100dp"
+						android:scaleType="fitXY"
+						android:src="@drawable/no_profile_image_circle"/>
+
+					<ImageView
+						android:layout_width="36dp"
+						android:layout_height="36dp"
+						android:scaleType="fitXY"
+						android:src="@drawable/pif_camera_one"
+						android:layout_alignParentEnd="true"
+						android:layout_alignParentBottom="true"/>
+
+				</RelativeLayout>
+
+			</RelativeLayout>
+
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:orientation="vertical"
+				android:layout_marginTop="10dp"
+				android:background="?attr/colorFill">
+
+				<com.google.android.material.textfield.TextInputLayout
+					style="@style/PifInputStyle"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginTop="20dp"
+					android:layout_marginStart="12dp"
+					android:layout_marginEnd="12dp"
+					app:boxStrokeWidth="1dp"
+					app:boxCornerRadiusTopStart="40dp"
+					app:boxCornerRadiusTopEnd="40dp"
+					app:boxCornerRadiusBottomStart="40dp"
+					app:boxCornerRadiusBottomEnd="40dp"
+					app:startIconDrawable="@drawable/pif_edit_user"
+					app:startIconTint="#737884"
+					app:endIconMode="custom"
+					app:hintTextAppearance="@style/PifInputStyleHint"
+                    >
+					<com.google.android.material.textfield.TextInputEditText
+						android:layout_width="match_parent"
+						android:layout_height="60dp"
+						android:id="@+id/usernameEdit"
+						android:ems="10"
+						android:singleLine="true"
+						android:hint="@string/Lbl_Username"
+						android:lineHeight="20dp"
+						android:paddingStart="32dp"
+						android:textFontWeight="500"
+						android:textSize="18dp" />
+				</com.google.android.material.textfield.TextInputLayout>
+
+
+				<com.google.android.material.textfield.TextInputLayout
+					style="@style/PifInputStyle"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginTop="20dp"
+					android:layout_marginStart="12dp"
+					android:layout_marginEnd="12dp"
+					app:boxStrokeWidth="1dp"
+					app:boxCornerRadiusTopStart="40dp"
+					app:boxCornerRadiusTopEnd="40dp"
+					app:boxCornerRadiusBottomStart="40dp"
+					app:boxCornerRadiusBottomEnd="40dp"
+					app:startIconDrawable="@drawable/pif_edit_user"
+					app:startIconTint="#737884"
+					app:endIconMode="custom"
+					app:hintTextAppearance="@style/PifInputStyleHint"
+                    >
+					<com.google.android.material.textfield.TextInputEditText
+						android:layout_width="match_parent"
+						android:layout_height="60dp"
+						android:id="@+id/FullNameEdit"
+						android:singleLine="true"
+						android:ems="10"
+						android:hint="@string/Lbl_FullName"
+						android:lineHeight="20dp"
+						android:paddingStart="32dp"
+						android:textFontWeight="500"
+						android:textSize="18dp" />
+				</com.google.android.material.textfield.TextInputLayout>
+
+				<com.google.android.material.textfield.TextInputLayout
+					style="@style/PifInputStyle"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginTop="20dp"
+					android:layout_marginStart="12dp"
+					android:layout_marginEnd="12dp"
+					app:boxStrokeWidth="1dp"
+					app:boxCornerRadiusTopStart="40dp"
+					app:boxCornerRadiusTopEnd="40dp"
+					app:boxCornerRadiusBottomStart="40dp"
+					app:boxCornerRadiusBottomEnd="40dp"
+					app:startIconDrawable="@drawable/pif_mail"
+					app:startIconTint="#737884"
+					app:endIconMode="custom"
+					app:hintTextAppearance="@style/PifInputStyleHint">
+					<com.google.android.material.textfield.TextInputEditText
+						android:layout_width="match_parent"
+						android:layout_height="60dp"
+						android:id="@+id/emailEdit"
+						android:singleLine="true"
+						android:ems="10"
+						android:hint="@string/Lbl_Email"
+						android:lineHeight="20dp"
+						android:paddingStart="32dp"
+						android:textFontWeight="500"
+						android:textSize="18dp" />
+				</com.google.android.material.textfield.TextInputLayout>
+
+				<com.google.android.material.textfield.TextInputLayout
+					style="@style/PifInputStyle"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginTop="20dp"
+					android:layout_marginStart="12dp"
+					android:layout_marginEnd="12dp"
+					app:boxStrokeWidth="1dp"
+					app:boxCornerRadiusTopStart="40dp"
+					app:boxCornerRadiusTopEnd="40dp"
+					app:boxCornerRadiusBottomStart="40dp"
+					app:boxCornerRadiusBottomEnd="40dp"
+					app:startIconDrawable="@drawable/pif_mail"
+					app:startIconTint="#737884"
+					app:endIconMode="custom"
+					app:hintTextAppearance="@style/PifInputStyleHint">
+					<com.google.android.material.textfield.TextInputEditText
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:minHeight="90dp"
+						android:maxHeight="200dp"
+						android:id="@+id/aboutEdit"
+						android:ems="10"
+						android:hint="@string/Lbl_about"
+						android:lineHeight="20dp"
+						android:paddingStart="32dp"
+						android:textFontWeight="500"
+						android:textSize="18dp" />
+				</com.google.android.material.textfield.TextInputLayout>
+
+				<com.google.android.material.textfield.TextInputLayout
+					style="@style/PifInputStyle"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginTop="20dp"
+					android:layout_marginStart="12dp"
+					android:layout_marginEnd="12dp"
+					app:boxStrokeWidth="1dp"
+					app:boxCornerRadiusTopStart="40dp"
+					app:boxCornerRadiusTopEnd="40dp"
+					app:boxCornerRadiusBottomStart="40dp"
+					app:boxCornerRadiusBottomEnd="40dp"
+					app:startIconDrawable="@drawable/pif_category"
+					app:startIconTint="#737884"
+					app:endIconDrawable="@drawable/pif_video_player_menu_down"
+					app:endIconTint="#737884"
+					app:endIconMode="custom"
+					app:hintTextAppearance="@style/PifInputStyleHint">
+					<com.google.android.material.textfield.TextInputEditText
+						android:layout_width="match_parent"
+						android:layout_height="60dp"
+						android:id="@+id/favCategoryEdit"
+						android:ems="10"
+						android:singleLine="true"
+						android:hint="@string/Lbl_favCategory"
+						android:lineHeight="20dp"
+						android:paddingStart="32dp"
+						android:textFontWeight="500"
+						android:textSize="18dp" />
+				</com.google.android.material.textfield.TextInputLayout>
+
+				<com.google.android.material.textfield.TextInputLayout
+					style="@style/PifInputStyle"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginTop="20dp"
+					android:layout_marginStart="12dp"
+					android:layout_marginEnd="12dp"
+					app:boxStrokeWidth="1dp"
+					app:boxCornerRadiusTopStart="40dp"
+					app:boxCornerRadiusTopEnd="40dp"
+					app:boxCornerRadiusBottomStart="40dp"
+					app:boxCornerRadiusBottomEnd="40dp"
+					app:startIconDrawable="@drawable/pif_male"
+					app:startIconTint="#737884"
+					app:endIconDrawable="@drawable/pif_video_player_menu_down"
+					app:endIconTint="#737884"
+					app:endIconMode="custom"
+					app:hintTextAppearance="@style/PifInputStyleHint"                    >
+					<com.google.android.material.textfield.TextInputEditText
+						android:layout_width="match_parent"
+						android:layout_height="60dp"
+						android:id="@+id/genderEdit"
+						android:ems="10"
+						android:singleLine="true"
+						android:hint="@string/Lbl_Gender"
+						android:lineHeight="20dp"
+						android:paddingStart="32dp"
+						android:textFontWeight="500"
+						android:textSize="18dp" />
+				</com.google.android.material.textfield.TextInputLayout>
+
+				<com.google.android.material.textfield.TextInputLayout
+					style="@style/PifInputStyle"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginTop="20dp"
+					android:layout_marginStart="12dp"
+					android:layout_marginEnd="12dp"
+					app:boxStrokeWidth="1dp"
+					app:boxCornerRadiusTopStart="40dp"
+					app:boxCornerRadiusTopEnd="40dp"
+					app:boxCornerRadiusBottomStart="40dp"
+					app:boxCornerRadiusBottomEnd="40dp"
+					app:startIconDrawable="@drawable/pif_calendar"
+					app:startIconTint="#737884"
+					app:endIconDrawable="@drawable/pif_short_arrow_right"
+					app:endIconTint="#737884"
+					app:endIconMode="custom"
+					app:hintTextAppearance="@style/PifInputStyleHint"
+                    >
+					<com.google.android.material.textfield.TextInputEditText
+						android:layout_width="match_parent"
+						android:layout_height="60dp"
+						android:id="@+id/ageEdit"
+						android:ems="10"
+						android:singleLine="true"
+						android:hint="@string/Lbl_Age"
+						android:lineHeight="20dp"
+						android:paddingStart="32dp"
+						android:textFontWeight="500"
+						android:textSize="18dp" />
+				</com.google.android.material.textfield.TextInputLayout>
+
+				<com.google.android.material.textfield.TextInputLayout
+					style="@style/PifInputStyle"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginTop="20dp"
+					android:layout_marginStart="12dp"
+					android:layout_marginEnd="12dp"
+					app:boxStrokeWidth="1dp"
+					app:boxCornerRadiusTopStart="40dp"
+					app:boxCornerRadiusTopEnd="40dp"
+					app:boxCornerRadiusBottomStart="40dp"
+					app:boxCornerRadiusBottomEnd="40dp"
+					app:startIconDrawable="@drawable/pif_us_flag"
+					app:startIconTint="#737884"
+					app:endIconDrawable="@drawable/pif_video_player_menu_down"
+					app:endIconMode="custom"
+					app:hintTextAppearance="@style/PifInputStyleHint"
+                    >
+					<com.google.android.material.textfield.TextInputEditText
+						android:layout_width="match_parent"
+						android:layout_height="60dp"
+						android:id="@+id/countryEdit"
+						android:ems="10"
+						android:singleLine="true"
+						android:hint="@string/Lbl_Country"
+						android:lineHeight="20dp"
+						android:paddingStart="32dp"
+						android:textFontWeight="500"
+						android:textSize="18dp" />
+				</com.google.android.material.textfield.TextInputLayout>
+
+				<View
+					android:layout_width="match_parent"
+					android:layout_height="1dp"
+					android:background="?attr/colorDivider"
+					android:layout_marginTop="20dp"
+					android:layout_marginEnd="12dp"
+					android:layout_marginBottom="20dp"
+					android:layout_marginStart="12dp"
+                    />
+
+				<TextView
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginStart="12dp"
+					android:layout_marginEnd="12dp"
+					android:textFontWeight="600"
+					android:textSize="18dp"
+					android:lineHeight="24dp"
+					android:text="@string/Lbl_Social_Links"
+                    />
+
+				<com.google.android.material.textfield.TextInputLayout
+					style="@style/PifInputStyle"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginTop="20dp"
+					android:layout_marginStart="12dp"
+					android:layout_marginEnd="12dp"
+					app:boxStrokeWidth="1dp"
+					app:boxCornerRadiusTopStart="40dp"
+					app:boxCornerRadiusTopEnd="40dp"
+					app:boxCornerRadiusBottomStart="40dp"
+					app:boxCornerRadiusBottomEnd="40dp"
+					app:startIconDrawable="@drawable/pif_facebook"
+					app:startIconTint="@null"
+					app:endIconMode="custom"
+					app:hintTextAppearance="@style/PifInputStyleHint"
+                    >
+					<com.google.android.material.textfield.TextInputEditText
+						android:layout_width="match_parent"
+						android:layout_height="60dp"
+						android:id="@+id/facebookEdit"
+						android:ems="10"
+						android:singleLine="true"
+						android:hint="@string/Lbl_facebook"
+						android:lineHeight="20dp"
+						android:paddingStart="32dp"
+						android:textFontWeight="500"
+						android:textSize="18dp" />
+				</com.google.android.material.textfield.TextInputLayout>
+
+				<com.google.android.material.textfield.TextInputLayout
+					style="@style/PifInputStyle"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginTop="20dp"
+					android:layout_marginStart="12dp"
+					android:layout_marginEnd="12dp"
+					app:boxStrokeWidth="1dp"
+					app:boxCornerRadiusTopStart="40dp"
+					app:boxCornerRadiusTopEnd="40dp"
+					app:boxCornerRadiusBottomStart="40dp"
+					app:boxCornerRadiusBottomEnd="40dp"
+					app:startIconDrawable="@drawable/pif_twitter"
+					app:startIconTint="@null"
+					app:hintTextAppearance="@style/PifInputStyleHint"
+                    >
+					<com.google.android.material.textfield.TextInputEditText
+						android:layout_width="match_parent"
+						android:layout_height="60dp"
+						android:id="@+id/twitterEdit"
+						android:ems="10"
+						android:singleLine="true"
+						android:hint="@string/Lbl_twitter"
+						android:lineHeight="20dp"
+						android:paddingStart="32dp"
+						android:textFontWeight="500"
+						android:textSize="18dp" />
+				</com.google.android.material.textfield.TextInputLayout>
+
+				<View
+					android:layout_width="match_parent"
+					android:layout_height="76dp"/>
+
+				<androidx.appcompat.widget.AppCompatButton
+					android:id="@+id/SaveButton"
+					android:layout_width="336dp"
+					android:layout_height="44dp"
+					android:layout_centerHorizontal="true"
+					android:text="@string/Lbl_Save"
+					android:background="@drawable/pif_btn_round_two"
+					android:textStyle="normal"
+					android:textFontWeight="500"
+					android:textSize="18dp"
+					android:lineHeight="22dp"
+					android:layout_marginTop="0dp"
+					android:paddingStart="17dp"
+					android:paddingEnd="17dp"
+					android:backgroundTint="@color/accent"
+					android:layout_marginEnd="5dp"
+					android:layout_gravity="center"
+					android:gravity="center"
+					android:textColor="@color/LightColor"
+					android:textAllCaps="false"
+                    />
+
+				<View
+					android:layout_width="match_parent"
+					android:layout_height="25dp"/>
+
+			</LinearLayout>
+
+			<com.google.android.gms.ads.admanager.AdManagerAdView
+				android:id="@+id/multiple_ad_sizes_view"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_alignParentBottom="true"
+				android:layout_centerHorizontal="true"
+				app:adSize="MEDIUM_RECTANGLE,120x20,250x250,320x100,SMART_BANNER"
+				app:adUnitId="@string/banner_multiple_ad_sizes_id" />
+		</LinearLayout>
+	</androidx.core.widget.NestedScrollView>
+</LinearLayout>
