@@ -455,7 +455,7 @@
 	</ItemGroup>
 	<ItemGroup>
 		<Reference Include="AamarPay">
-			<HintPath>..\API\AamarPay.dll</HintPath>
+			<HintPath>API\AamarPay.dll</HintPath>
 		</Reference>
 		<Reference Include="CircleButton">
 			<HintPath>API\CircleButton.dll</HintPath>
